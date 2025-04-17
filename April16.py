@@ -13,6 +13,11 @@ hobby = "Hiking"
 
 #problem 4
 #Counts down from 5 to 1 and then prints "Blast off!"
-for i in range(5,0,-1):
-    print(i)
-print("Blast off!")
+#for i in range(5,0,-1):
+#    print(i)
+#print("Blast off!")
+
+weekend = False
+i = 1
+while weekend == False:
+    
