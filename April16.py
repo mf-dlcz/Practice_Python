@@ -3,7 +3,7 @@
     #print(i)
 
 #problem 2
-hobby = "Hiking"
+#hobby = "Hiking"
 #for each_letter in hobby:
     #print(each_letter, end=" ")
 
