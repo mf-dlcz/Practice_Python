@@ -31,3 +31,5 @@ special_message = "Congratulations on your achievement!"  # Replace with a speci
 # Your task is to write this f-string in the code below.
 
 print(f'Hi {recipient_name}, this is {sender_name}. {special_message}')
+print(f'Thank you, {recipient_name}, for being amazing!')
+
