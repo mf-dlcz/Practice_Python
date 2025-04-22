@@ -41,7 +41,6 @@
 #x = float(3)
 #y = str(2)
 #z = int(2.8)
-
 #print(x) #Output 3.0
 #print(y) #Output "2"
 #print(z) #Output 2
@@ -61,6 +60,7 @@
 #print(favoriteCity[:3]) #Output: "New"
 # Leave the end empty to slice from desired index to the end
 #print(favoriteCity[4:]) #Output: "York"
+
 
 # Exercise 7:
 # Modify this code to complete the tasks below
@@ -191,7 +191,6 @@ print(Outside the if statement)
 
 #f = 96
 #m = 39
-
 #if f > m:
 #    print(f"{f} is greater than, {m}")
 #elif m > f:
@@ -244,6 +243,7 @@ print(Outside the if statement)
 for <variable> in <iterable>:
     <body>
 '''
+
 
 # Example 17:
 vocabulary_word = "Volatile"
