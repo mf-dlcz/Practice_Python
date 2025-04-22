@@ -123,3 +123,35 @@ favoriteCity = "New York"
 
 
 # Exercise 11:
+# Escape character \
+#myFav_affirmation = "Briana Wiest \"You're not looking for anyone else to give you the answers, you're looking for what you already know to be reflected back to you. You already know what's true\""
+#print(myFav_affirmation)
+# New line
+#fav_music = "\nElectronic, \nPost-Punk, \nLofi, \nInstrumental Metal, \nTechno, \nDub"
+#print(fav_music)
+# Tab
+#paragraph = "\tThis has been an incredible, ride. I've meet amazing people along the way that have taught me things about me. \nEveryday, I am grateful for the experiences that shape my reality. I'm grateful I met you!"
+#print(paragraph)
+#Example:
+#print("Name:\tTerry\nAge:\t28\nJob:\tCloud application developer")
+
+
+# Exercise 12:
+# Task 1: Use string concatenation to introduce yourself
+name = "Maria"
+introduction = "Hi, this is " + name + ". It's a pleasure to be here."
+print(introduction)  # Expected output: Hello, my name is [Your Name].
+# Task 2: Use the .format() method to add more details
+# Replace placeholders with your hobby, age, and city
+details = "I enjoy {}. I am {} years old and I live in {}.".format("working out", "99", "Venus") # Complete this line
+print(details)  # Expected output: I enjoy [Your Hobby]. I am [Your Age] years old and I live in [Your City].
+# Task 3: Use escape characters to display a formatted block
+# Use \n for new lines and \t for tabs
+formatted_info = "\nName:\tMaria\nHobby:\tWorking Out\nAge:\t99"
+print(formatted_info)  # Expected output:
+# Name:     [Your Name]
+# Hobby:    [Your Hobby]
+# Age:      [Your Age]
+
+
+#Exercise 13:
