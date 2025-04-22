@@ -84,11 +84,42 @@ favoriteCity = "New York"
 
 # Exercise 8:
 # .upper() Capitalizes
-listOfHobbies = "Hiking, Djing, dancing, painting, photographing, exercising, sleeping, reading, studying"
-print(listOfHobbies.upper())
-# .strip() Removes white space
-removeWhiteSpace = "            Why?        "
-print(removeWhiteSpace.strip())
+#listOfHobbies = "Hiking, Djing, dancing, painting, photographing, exercising, sleeping, reading, studying"
+#print(listOfHobbies.upper())
+# .strip() Removes white space from the BEGINNING & END
+#removeWhiteSpace = "            Why?        "
+#print(removeWhiteSpace.strip())
 # .replace() Replaces a string with another string & returns a new string
-bookName = "How to Make Friends & Influence People"
-print(bookName.replace("&", "and"))
+#bookName = "How to Make Friends & Influence People"
+#print(bookName.replace("&", "and"))
+
+
+# Exercise 9:
+#user_name = " Jjonathan Smith"
+#removedWhiteSpace = user_name.strip()
+#correct_userName = removedWhiteSpace.replace("Jjonathan", "Jonathan")
+#   Result
+#print(correct_userName)
+
+#       Part 2
+#messageInA_Bottle = "          Hiii, I miss you so much!!          "
+#removedExtraI = messageInA_Bottle.strip()
+#intendedMessage = removedExtraI.replace("Hiii", "Hey babe")
+#   Result
+#print(intendedMessage)
+
+
+# Exercise 10:
+#Concatenating Strings: Combines two or more strings into a single string
+#age = 59
+#profile = "Hi, my name is Megan, and I am {} years old."
+#print(profile.format(age))
+
+#first_name = "Clara"
+#last_name = "Smith"
+#fav_Artist = "Helmut Ebritsch"
+#message = "My name is {} {}. I'm {} years old, and currently my favorite artist is {}"
+#print(message.format(first_name, last_name, age, fav_Artist))
+
+
+# Exercise 11:
