@@ -212,3 +212,41 @@ print(Outside the if statement)
 
 
 # Exercise 15:
+# Step 1: Define the age variable
+#age = 12  # Assign a numeric value to represent someone's age
+# Step 2: Use if-elif-else to determine the life stage
+# Add your conditions below
+#if age < 13:
+#    print("You're a child")
+#elif age >= 13 and age <= 19:
+#    print("You're a teenager")
+#elif age == 20 or age > 20 and age <= 100:
+#    print("You're an adult")
+#else:
+#    print("You're an alien")
+
+
+# Exercise 16:
+# for loop with range()
+# for loop prints #'s from 10 - 20
+#for number in range(10, 20):
+#    print(number)
+#    print("This line runs inside the loop") #because of the indentation:
+#print("This line does NOT run inside the loop")
+
+      # 16.2     
+# loops through each character
+#motivational_message = "opportunities DON'T happen, you create them."
+#for character in motivational_message:
+#    print(character)
+
+'''     for loop syntax:
+for <variable> in <iterable>:
+    <body>
+'''
+
+# Example 17:
+vocabulary_word = "Volatile"
+print(f"The word {vocabulary_word} is spelled: ")
+for character in vocabulary_word:
+    print(character)
