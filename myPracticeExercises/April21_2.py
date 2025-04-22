@@ -50,7 +50,7 @@
 # Exercise 6:
 #Indexing
 #name = "María"
-favoriteCity = "New York"
+#favoriteCity = "New York"
 #print(name[2]) #Output: "r"
 #print(name[0]) #Output: "M"
 #print(name[3]) #Output: "í"
@@ -101,7 +101,7 @@ favoriteCity = "New York"
 #   Result
 #print(correct_userName)
 
-#       Part 2
+      # 9.2
 #messageInA_Bottle = "          Hiii, I miss you so much!!          "
 #removedExtraI = messageInA_Bottle.strip()
 #intendedMessage = removedExtraI.replace("Hiii", "Hey babe")
@@ -138,20 +138,45 @@ favoriteCity = "New York"
 
 # Exercise 12:
 # Task 1: Use string concatenation to introduce yourself
-name = "Maria"
-introduction = "Hi, this is " + name + ". It's a pleasure to be here."
-print(introduction)  # Expected output: Hello, my name is [Your Name].
+#name = "Maria"
+#introduction = "Hi, this is " + name + ". It's a pleasure to be here."
+#print(introduction)  # Expected output: Hello, my name is [Your Name].
 # Task 2: Use the .format() method to add more details
 # Replace placeholders with your hobby, age, and city
-details = "I enjoy {}. I am {} years old and I live in {}.".format("working out", "99", "Venus") # Complete this line
-print(details)  # Expected output: I enjoy [Your Hobby]. I am [Your Age] years old and I live in [Your City].
+#details = "I enjoy {}. I am {} years old and I live in {}.".format("working out", "99", "Venus") # Complete this line
+#print(details)  # Expected output: I enjoy [Your Hobby]. I am [Your Age] years old and I live in [Your City].
 # Task 3: Use escape characters to display a formatted block
 # Use \n for new lines and \t for tabs
-formatted_info = "\nName:\tMaria\nHobby:\tWorking Out\nAge:\t99"
-print(formatted_info)  # Expected output:
+#formatted_info = "\nName:\tMaria\nHobby:\tWorking Out\nAge:\t99"
+#print(formatted_info)  # Expected output:
 # Name:     [Your Name]
 # Hobby:    [Your Hobby]
 # Age:      [Your Age]
 
 
-#Exercise 13:
+# Exercise 13:
+# Conditions & Loops
+# Using conditionals with proper indentation
+
+'''    Syntax: 
+if <condition>:         Evaluates to either True or False
+    <perform an action>
+print(Outside the if statement)
+'''
+
+#m = 29
+#if m < 17:  
+#    print("m is less than 17")
+#elif m == 20:
+#    print("m is equal to 20")
+#else:
+#    print("m is less than 30")
+#Outside the if statement
+#print("Condition check complete!")
+
+        # 13.2
+t = 16
+k = 4
+if k < t:
+    print(f"{t} is greater than {k}")
+print("This code is outside the if statement.")
