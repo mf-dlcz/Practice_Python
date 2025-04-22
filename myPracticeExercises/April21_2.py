@@ -175,8 +175,40 @@ print(Outside the if statement)
 #print("Condition check complete!")
 
         # 13.2
-t = 16
-k = 4
-if k < t:
-    print(f"{t} is greater than {k}")
-print("This code is outside the if statement.")
+#t = 16
+#k = 4
+#a = 8
+#if k < t and k < a:
+#    print(f"{t} is greater than {k}. \n{k} is less than {a}.")
+#print("\tThis code is outside the if statement.")
+
+#if k != a or t > a:
+#    print(f"\n{k} is NOT equal to {a}. \n{t} is greater than {a}.")
+
+
+# Exercise 14:
+# if elif
+
+#f = 96
+#m = 39
+
+#if f > m:
+#    print(f"{f} is greater than, {m}")
+#elif m > f:
+#    print(f"{m} is greater than {f}")
+#print("The condition is over")
+
+      # 14.2
+#g = 57
+#j = 86
+#p = 86
+
+#if p < g:
+#    print(f"{p} is less than {g}")
+#elif j == p:
+#    print(f"{j} is equal to {p}")
+#else:
+#    print(f"{p} is greater than {j}, and {g}")
+
+
+# Exercise 15:
