@@ -55,11 +55,40 @@ favoriteCity = "New York"
 #print(name[0]) #Output: "M"
 #print(name[3]) #Output: "í"
   #Slicing
-print(favoriteCity[0:3]) #Output: "New"
-print(favoriteCity[4:8]) #Output: "York"
+#print(favoriteCity[0:3]) #Output: "New"
+#print(favoriteCity[4:8]) #Output: "York"
 # Leave the begining empty to slice from begining to index 3
-print(favoriteCity[:3]) #Output: "New"
+#print(favoriteCity[:3]) #Output: "New"
 # Leave the end empty to slice from desired index to the end
-print(favoriteCity[4:]) #Output: "York"
+#print(favoriteCity[4:]) #Output: "York"
 
-#Exercise 7:
+# Exercise 7:
+# Modify this code to complete the tasks below
+#my_string = "Python is awesome!"
+# Example of slicing: Extract "Python" from the string
+#example_slice = my_string[:6]
+#print(example_slice)
+# Task #1 -> Extract the word "awesome" using slicing
+#awesome_slice = my_string[10:17]
+#print(awesome_slice)
+# Task #2 -> Extract the phrase "Python is"
+#pythonIs_slice = my_string[0:9]
+#print(pythonIs_slice)
+# Task #3 -> Extract everything from the word "is" to the end of the string
+#isEverything_slice = my_string[7:]
+#print(isEverything_slice)
+# Task #4 -> Reverse the entire string using slicing
+#reverseString_slice = my_string[::-1]
+#print(reverseString_slice)
+
+
+# Exercise 8:
+# .upper() Capitalizes
+listOfHobbies = "Hiking, Djing, dancing, painting, photographing, exercising, sleeping, reading, studying"
+print(listOfHobbies.upper())
+# .strip() Removes white space
+removeWhiteSpace = "            Why?        "
+print(removeWhiteSpace.strip())
+# .replace() Replaces a string with another string & returns a new string
+bookName = "How to Make Friends & Influence People"
+print(bookName.replace("&", "and"))
