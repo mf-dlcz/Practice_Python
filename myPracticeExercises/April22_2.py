@@ -1,4 +1,4 @@
-# Use rang() to loop & access the elements of an iterable using an index
+# Use range() to loop & access the elements of an iterable using an index
 
 '''             Example:
 for <counter_variable> in range(len(iterable)):
@@ -7,7 +7,7 @@ for <counter_variable> in range(len(iterable)):
 '''
 
 
-# Exercise 1:
+        #  Exercise 1:
 #name = "María"
                 # 5 letters     
 #for i in range(len(name)):
@@ -25,9 +25,34 @@ element at index 2 is r
 #    print(num)
 
 
-# Exercise 2:
+        # Exercise 2:
 '''         Definition:
     while loops -> is a control flow  statement that enables you to
-    runs code repeatedly WHILE a specified condition is True. 
+    runs code repeatedly WHILE a specified condition is True.
+    This loop is best suited for iterating when the number of iterations
+    is known.
 '''
 
+# Counts from 1 to 5
+#count = 1
+#while count <= 5:
+#    print(count)
+#    count = count + 1          #Increments count to begin the loop again
+
+        # 2.2:
+#play_again = 'y'
+#while (play_again == 'y'):
+#    play_again = input("Would you like to play again (y/n)? ")
+#print("Thanks for playing! Goodbye.")
+
+
+'''
+    Break Statement -> is a control flow statement you use to IMMEDIATELY
+    STOP running a for or while loop statement.
+'''
+        # Exercise 3:
+#favColor = "black"
+#for i in favColor:
+#    if i == 'l':
+#        print("The letter " + i + " was found!")
+#        break
