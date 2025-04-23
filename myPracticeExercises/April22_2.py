@@ -60,6 +60,7 @@ element at index 2 is r
 
 '''     input() ->  allows you to pause your program and prompt
 a user to enter text. Python then assigns it to a variable.
+            ** Receives as a str.
 ''' 
 
 # user_name = input("What is your user name? \n")
@@ -82,4 +83,28 @@ a user to enter text. Python then assigns it to a variable.
 #     else:
 #         print("\nWRONG USERNAME (；一_一)\n")
 
+        # 3.2:
+# customerName = input("What's your name? \n")
+# print(f"Welcome, {customerName}")
 
+
+        # Exercise 4:
+'''
+    int() -> Converts a str into an integer
+'''
+# print("Were you born after 2002?")
+# birthYear = input("Enter your birth year? \n")
+# birthYear = int(birthYear)
+# if (birthYear > 2002):
+#     print("True")
+# else:
+#     print("False")
+
+        # 4.2:
+# Step 1: Ask for the user's name and birth year
+name = input("Enter your name: ")  # Prompt user for their name
+birth_year = input("Enter your birth year: ")  # Prompt user for their birth year
+# Step 2: Convert the birth year to an integer
+# Step 3: Calculate the user's age
+# Step 4: Print their name and age
+# Step 5: Check if they are 18 or older and print an appropriate message
