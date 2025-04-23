@@ -102,9 +102,13 @@ a user to enter text. Python then assigns it to a variable.
 
         # 4.2:
 # Step 1: Ask for the user's name and birth year
-name = input("Enter your name: ")  # Prompt user for their name
-birth_year = input("Enter your birth year: ")  # Prompt user for their birth year
-# Step 2: Convert the birth year to an integer
-# Step 3: Calculate the user's age
-# Step 4: Print their name and age
-# Step 5: Check if they are 18 or older and print an appropriate message
+name = input("Enter your name: ")                   # Prompt user for their name
+birth_year = input("Enter your birth year: ")       # Prompt user for their birth year
+birth_year = int(birth_year)                        # Step 2: Convert the birth year to an integer
+current_year = 2025
+age = current_year - birth_year                     # Step 3: Calculate the user's age
+print(f"{name}, you are {age} years old.")          # Step 4: Print their name and age
+if age >= 18:
+    print("You're an adult! 🥳 ")
+else:
+    print("You're a minor! 🍼 ")         # Step 5: Check if they are 18 or older and print an appropriate message
