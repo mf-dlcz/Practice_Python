@@ -20,11 +20,14 @@ secondary_colors = ['purple', 'green', 'orange']
 # combinationOfColors[1] = temp
 # print(combinationOfColors)
 
-#c) Check if 'purple' is in your final color list
+        # 2b)
 # temp = combinationOfColors[2]
 # combinationOfColors[2] = combinationOfColors[3]
 # combinationOfColors[3] = temp
 # print(combinationOfColors)
+
+#c) Check if 'purple' is in your final color list
+
 
 
 # Exercise 3:
