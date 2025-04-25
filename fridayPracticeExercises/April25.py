@@ -10,27 +10,21 @@ temperatures = [15, 20, 12, 24, 18, 21, 16, 19]
 # You have two lists of colors:
 primary_colors = ['red', 'blue', 'yellow']
 secondary_colors = ['purple', 'green', 'orange']
-# Tasks:
 # a) Combine these into one master color list using the + operator
-# b) Swap the first two colors in the list. Hint: Use a new variable to store one of the colors.
-# c) Check if 'purple' is in your final color list
-
-# a)
-combinationOfColors = primary_colors + secondary_colors
+# combinationOfColors = primary_colors + secondary_colors
 #print(combinationOfColors)
 
-# b)
+# b) Swap the first two colors in the list. Hint: Use a new variable to store one of the colors.
 # temp = combinationOfColors[0]
 # combinationOfColors[0] = combinationOfColors[1]
 # combinationOfColors[1] = temp
 # print(combinationOfColors)
 
-#c)
+#c) Check if 'purple' is in your final color list
 # temp = combinationOfColors[2]
 # combinationOfColors[2] = combinationOfColors[3]
 # combinationOfColors[3] = temp
 # print(combinationOfColors)
-
 
 
 # Exercise 3:
@@ -40,7 +34,6 @@ word_frequency = {
     "you": 29, "that": 13
 }
 # Find those popular words! Write a program to iterate through this dictionary and print only the words that have a frequency of 20 or more.
-
 # for key, value in word_frequency.items():
 #     if value >= 20:
 #         print(key)
@@ -58,11 +51,12 @@ Remember, we can add new elements to a dictionary
 using dictionary[key] = value syntax.
 '''
 # Creates empty dictionary
-fruitQuantities = {}
+# fruitQuantities = {}
 # index, apples
-for i,fruit in enumerate(fruits):
-    fruitQuantities[fruit] = quantity[i]
-print(fruitQuantities)
+# for i,fruit in enumerate(fruits):
+#     fruitQuantities[fruit] = quantity[i]
+# print(fruitQuantities)
+
 
 # Exercise 5:
 '''
@@ -74,5 +68,18 @@ print(fruitQuantities)
  dictionary. If it does, print the score of that user name. 
  If not, print a message that user has not been found.
 '''
-
-#membership operation
+# Dictionary with 3 names & their respective scores
+scores = {
+    'Kyle': 20,
+    'Cara': 26,
+    'Leslie': 24
+}
+# Input from user stored in name
+name = input('\nPlease, enter a name ')
+# Looking for the name entered in my dictionary
+if name in scores:
+    
+    score = scores[name]
+    print(f"{name}'s score: \t{score}")
+else:
+    print('The user has not been found')
