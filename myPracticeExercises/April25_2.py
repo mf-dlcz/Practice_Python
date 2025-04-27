@@ -1,9 +1,9 @@
 # Exercise 1:
 # Filter cold day temperatures below 60°F
-weeklyTemperature = [50, 60, 40, 70, 50, 80, 100]
-
-
-
+# weeklyTemperature = [50, 60, 40, 70, 50, 80, 100]
+# for temp in weeklyTemperature:
+#     if temp <= 60:
+#         print(temp)
 
 
 # Exercise 2:
@@ -11,13 +11,15 @@ weeklyTemperature = [50, 60, 40, 70, 50, 80, 100]
 fourWheelVehicles = ["sedan", "truck", "SUV", "van", "coupes", "hatchback"]
 twoWheelVehicles = ["motorcycle", "scooter", "moped", "bicycle"]
 # a) Combine these into one master list using the + operator
-
+allVehicles = fourWheelVehicles + twoWheelVehicles
+# print(allVehicles)
 
 
 # b) Swap the 6 and 7 vehicle in the list. Hint: Use a new variable to store one of the vehicles.
-
-
-
+# tempPosition = allVehicles[5]
+# allVehicles[5] = allVehicles[6]
+# allVehicles[6] = tempPosition
+# print(allVehicles)
 
 
 #c) Check if 'moped' is in your final color list
