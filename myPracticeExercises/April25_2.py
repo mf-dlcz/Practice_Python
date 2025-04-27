@@ -22,9 +22,13 @@ allVehicles = fourWheelVehicles + twoWheelVehicles
 # print(allVehicles)
 
 
-#c) Check if 'moped' is in your final color list
+#c) Check if 'moped' is in your final vehicle list
+# user_input = input("What vehicle are you looking for? \n")
 
-
+# if user_input == 'moped':
+#     print("\nMoped is in the vehicle's list 🎉")
+# else:
+#     print(f"\n{user_input} is NOT in our list 🥺\n")
 
 
 # Exercise 3:
@@ -36,12 +40,11 @@ word_frequency = {
 '''
 Find the least popular words! Write a program to iterate 
 through this dictionary and print only the words that 
-have a frequency of less than 20.
+have a frequency of less than 30.
 '''
-
-
-
-
+for key, value in word_frequency.items():
+    if value < 30:
+        print(key)
 
 
 # Exercise 4:
