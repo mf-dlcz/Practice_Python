@@ -21,3 +21,11 @@ nums = [65, 71, 23, 88]
 # new_nums = nums.copy()
 # print(new_nums, nums)
 
+fruit = {'apple': 3, 'banana': 2, 'orange': 5}
+# returns none is the key doesn't exist
+# print(fruit.get('pear'))
+# returns an error if key does not exist
+# print(fruit['pear'])
+
+items = fruit.items()
+print(items)
