@@ -63,13 +63,13 @@ using dictionary[key] = value syntax.
 
 # Exercise 5:
 '''
- Write a program to create a dictionary, 
- scores = {} with 3 names (keys) and associated 
- scores (values). Iterate through the dictionary and 
- print the key-value pairs. Get user input for a name 
- and check to see if that name exists in the scores 
- dictionary. If it does, print the score of that user name. 
- If not, print a message that user has not been found.
+Write a program to create a dictionary, 
+scores = {} with 3 names (keys) and associated 
+scores (values). Iterate through the dictionary and 
+print the key-value pairs. Get user input for a name 
+and check to see if that name exists in the scores 
+dictionary. If it does, print the score of that user name. 
+If not, print a message that user has not been found.
 '''
 # Dictionary with 3 names & their respective scores
 scores = {
