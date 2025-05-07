@@ -1,27 +1,29 @@
-# Task 1: Practicing Python Basics
+#                                           Task 1: Practicing Python Basics (AREA)
 # pi = 3.14
-# radius = input("Enter a number to be the radius: \n")
+# radius = 30
+# radius = float(input("Enter a number to be the radius: \n"))
 
 # #convert string to number
 # radius = int(radius)
 
 # areaOfCircle = (pi * radius * radius)
-# print(f"The are of the circle is {areaOfCircle}")
+# print(f"The area of the circle with user input radius is {areaOfCircle}")
 
 
 # #############################################
-
+#                                             Task 1.2 Temperature
 # Convert Farenheit into Celsius
 # farenheit = input("Enter temperature in Farenheit: \n")
 
 # Formula to convert:
-# farenheit = int(farenheit)
+# farenheit = float(farenheit)
 
 # celsius = (farenheit - 32) * 5/9
 # print(f"{farenheit} farenheit into Celsius is : {celsius}")
 
 
 # ##############################################
+#                                             Task 1.3 Swap
 # x = input("Enter a number for x: \n")
 # y = input("Enter a number for y: \n")
 
@@ -32,7 +34,8 @@
 # print(f"x = {x}             {y} = y")
 
 
-# Task 2: Practicing with Conditionals
+# ############################################
+#                                            Task 2: Practicing with Conditionals
 # if 's' in "String":
 #     print("Found!")
 # if 's' not in "String":
@@ -50,7 +53,7 @@ statement = "The Cat in the Hat is a children's book"
 
 
 # #################################################
-
+#                                       Task 2.2 Even & Odd                       
 """
 In a new file, ask the user to input any number. 
 Use conditions to determine if the user-entered 
@@ -58,16 +61,16 @@ number is even or odd, and print if the number is
 even or if the number is odd.
 """
 
-# number = input("Enter a number: \n")
-# num = int(number)
+# number = int(input("Enter a number: \n"))
 
-# if num % 2 == 0:
-#     print(f"{num} is even.")
+# if number % 2 == 0:
+#     print(f"{number} is even.")
 # else:
-#     print(f"{num} is odd.")
+#     print(f"{number} is odd.")
 
 
 # ##################################################
+#                                        Task 3.3 Auditorium Seating
 """
 In a new file, write a program to allocate an auditorium 
 seating row for the user based on their favorite number by 
@@ -90,11 +93,17 @@ Fav_number ---- Row
 41 - 50 ------ A
 """
 
-fav_num = input("Enter a number between 1 and 50: \n")
-num = int(fav_num)
+fav_num = int(input("Enter your favorite number between 1 and 50: \n"))
 
-if num > 50:
-    print("invalid number")
-elif num < 0:
-    print("invalid number")
-
+if 1 <= fav_num and fav_num <= 10:
+    print("\nYou're in row E")
+elif 11 <= fav_num and fav_num <= 20:
+    print("\nYou're in row D")
+elif 21 <= fav_num and fav_num <= 30:
+    print("\nYou're in row C")
+elif 31 <= fav_num and fav_num <= 40:
+    print("\nYou're in row B")
+elif 41 <= fav_num and fav_num <= 50:
+    print("\nYou're in row A")
+elif fav_num >= 51 or fav_num <= 0:
+    print("\n------- INVALID INPUT -------\n")
