@@ -33,4 +33,4 @@
 
 # What will this print out?
 # mystring = "Cloud computing is Fun"
-# print(mystring[7:11])       # Output 7 - 10      -> omput
+# print(mystring[7:11])       # Output 7 - 10      -> ompu
