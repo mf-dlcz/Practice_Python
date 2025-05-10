@@ -2,5 +2,5 @@
 
 ## Table of Contents
 
-- [Practice Python](#practice-python)
-  - [Table of Contents](#table-of-contents)# Practice_Python
+- [Practice Python](#practice-python)(#Practice_Python)
+  - [Table of Contents](#table-of-contents)(#Table-of-contents)
