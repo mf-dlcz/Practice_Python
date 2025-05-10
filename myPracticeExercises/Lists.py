@@ -1,4 +1,11 @@
-# Lists and Sets
+# Lists
+
+"""
+Store a collection of elements.
+Lists are mutable, can hold any data type,
+and accept repeated values. Elements are items.
+Items can be added, removed or edited.
+"""
 
 #  *** Slicing -> similar to slicing a string
 #   Doesn't change original sequence
