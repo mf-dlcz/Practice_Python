@@ -10,7 +10,7 @@ through iteration.
 #               Exercise 1:
 # names = ["Alejandro", "Ana", "carlos", "john", "Jane", "Paulo"]
 
-#  placeholder
+# name =  placeholder 
 # for name in names:
 #     name = name.title()
 #     print (f"Hello, {name}!")
@@ -29,10 +29,10 @@ owner_names = [ "alex", "beatriz", "carla", "derek", "alex" ]
 #     print(message)
 
 # Step 3: Convert the list of owner names to a set to remove duplicates, and loop through it.
-removed_duplicates = set(owner_names)
+# removed_duplicates = set(owner_names)
 # print(removed_duplicates)
-for uniqueName in removed_duplicates:
-    firstLetterCapital = uniqueName.title()
+# for uniqueName in removed_duplicates:
+#     firstLetterCapital = uniqueName.title()
     # print(firstLetterCapital)
 
 # Step 4: Print a note after looping through the set, mentioning that duplicates were removed.
@@ -40,7 +40,32 @@ for uniqueName in removed_duplicates:
 
 
 #               Using Range & Index:
-names = ["Alejandro", "Ana", "carlos", "john", "Jane", "Paulo"]
+# names = ["Alejandro", "Ana", "carlos", "john", "Jane", "Paulo"]
 
-for i in range(len(names)):
-    print (f"{names[i]} is at position {i}")
+# for i in range(len(names)):
+    # print (f"\n{names[i]} is at position {i}\n")
+
+
+#             Exercise 2: Numbering Pet Names
+
+# Step 1: Create a list of pet names.
+# Pet names: "Buddy", "Max", "Bella", "Charlie", "Luna"
+pet_names = ["Buddy", "Max", "Bella", "Charlie", "Luna"]
+
+# Step 2: Use a for loop with range() and len() to iterate through the list by index.
+# Print a numbered list of pet names starting with 1.
+# Example output: "1. Buddy"
+# for pet in range(len(pet_names)):
+    # print(f"{pet}.  {pet_names[pet]}")
+
+
+#             enumerate()   -> Does the same thing as the code above
+
+"""     Syntax for using enumerate()
+  index                  (iterable DS)
+for i, name in enumerate(names):
+       item
+"""
+for i, name in enumerate(pet_names):
+    print(f"{i}: {name.title()}")
+
