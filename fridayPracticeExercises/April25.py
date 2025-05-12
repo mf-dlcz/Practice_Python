@@ -11,7 +11,7 @@ temperatures = [15, 20, 12, 24, 18, 21, 16, 19]
 primary_colors = ['red', 'blue', 'yellow']
 secondary_colors = ['purple', 'green', 'orange']
 # a) Combine these into one master color list using the + operator
-# combinationOfColors = primary_colors + secondary_colors
+combinationOfColors = primary_colors + secondary_colors
 #print(combinationOfColors)
 
 # b) Swap the first two colors in the list. Hint: Use a new variable to store one of the colors.
@@ -27,7 +27,10 @@ secondary_colors = ['purple', 'green', 'orange']
 # print(combinationOfColors)
 
 #c) Check if 'purple' is in your final color list
-
+if "white" in combinationOfColors:
+    print(f"Yes, purple is in {combinationOfColors}")
+else:
+    print(f"No, purple is not in {combinationOfColors}")
 
 
 # Exercise 3:
@@ -78,11 +81,11 @@ scores = {
     'Leslie': 24
 }
 # Input from user stored in name
-name = input('\nPlease, enter a name ')
+# name = input('\nPlease, enter a name ')
 # Looking for the name entered in my dictionary
-if name in scores:
+# if name in scores:
     
-    score = scores[name]
-    print(f"{name}'s score: \t{score}")
-else:
-    print('The user has not been found')
+#     score = scores[name]
+#     print(f"{name}'s score: \t{score}")
+# else:
+#     print('The user has not been found')

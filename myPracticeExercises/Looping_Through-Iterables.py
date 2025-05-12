@@ -66,6 +66,25 @@ pet_names = ["Buddy", "Max", "Bella", "Charlie", "Luna"]
 for i, name in enumerate(names):
        item
 """
-for i, name in enumerate(pet_names):
-    print(f"{i}: {name.title()}")
+# for i, name in enumerate(pet_names):
+    # print(f"{i}: {name.title()}")
+
+
+#               Exercise 3: Enumerating Pet Names
+
+# Step 1: Create a list of pet names.
+# Pet names: "Buddy", "Max", "Bella", "Charlie", "Luna"
+pet_names = ["Buddy", "Max", "Bella", "Charlie", "Luna"]
+
+# Step 2: Use the enumerate() function to loop through the list.
+# Print a numbered list of pet names starting with 0 for the index.
+# Example output: "0: Buddy"
+# for i, names in enumerate(pet_names):
+#     print(f"{i}: {names}")
+
+# Step 3: Adjust the numbering manually so it starts from 1 instead of 0.
+# Example output: "1: Buddy"
+for i, names in enumerate(pet_names):
+    index = i + 1
+    print(f"{index}: {names}")
 
