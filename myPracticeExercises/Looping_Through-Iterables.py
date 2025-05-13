@@ -12,7 +12,7 @@ through iteration.
 
 # name =  placeholder 
 # for name in names:
-#     name = name.title()
+#     name = name.title()           # .title() -> Capitalizes the first letter of each item
 #     print (f"Hello, {name}!")
 
 
