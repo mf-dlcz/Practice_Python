@@ -12,7 +12,7 @@ def welcome_message():
     1. Use print() to show a welcome message
     2. Add a second print() for one line game description
     """
-    print("Welcome to the Virtual Pet Game!")
+    print("\n\tWelcome to the Virtual Pet Game!")
     print("Take care of your virtual pet & have fun!")
 
 ### 2. Create Pet Function
@@ -30,7 +30,7 @@ def create_pet():
     Example:
     If user enters "Fluffy", function should return "Fluffy"
     """
-    name = input("Enter your pet name: ")
+    name = input("\nEnter your pet's name: ")
     return name
 
 ### 3. Feed Pet Function
@@ -60,7 +60,7 @@ def feed_pet(name, hunger):
         print(f"{name} is hungry and eating...")
     elif hunger >= 80:
         print(f"{name} is not hungry")
-    
+    return hunger - 30
 
 ### 4. Pet Nap Function
 def pet_nap(name, sleep):
@@ -85,11 +85,12 @@ def pet_nap(name, sleep):
     - Print that Fluffy is taking a nap
     - Return False
     """
-    if sleep:
-        print(f"SSHHH.... {name} is sleepy and taking a nap.")
-        # sleep = FALSE
-
-
+    if sleep == True:
+        print(f"SSHHH.... {name} is sleepy and needs to take a nap.")
+        sleep = False
+    else:
+        print(f"{name} rests for a while, but {name} isn't tired.")
+    return sleep
 
 ### 5. Pet Shower Function
 def pet_shower(name, shower):
@@ -114,8 +115,12 @@ def pet_shower(name, shower):
     - Print that Fluffy is getting clean
     - Return False
     """
-    # Your code here
-    pass
+    if shower == True:
+        print(f"{name} is showering")
+        shower == False
+    elif shower == False:
+        print(f"{name} doesn't need to shower")
+    return shower
 
 #### main part of the program starts here #####
 
@@ -150,6 +155,7 @@ print("\nWhat would you like to do with your pet?")
 print("1. \U0001F355 Feed your pet")
 print("2. \U0001F4A4 Let your pet rest.")
 print("3. \u2668 Give your pet a shower.")
+print("4. \u274C EXIT THE GAME")
 
 user_action = input("Enter your choice: ")
 
@@ -162,3 +168,5 @@ elif user_action == "2":
     pet_sleepy = pet_nap(pet_name, pet_sleepy)
 elif user_action == "3":
     pet_dirty = pet_shower(pet_name, pet_dirty)
+elif user_action == "4":
+    print("Ciao")
