@@ -14,7 +14,7 @@
 #Exercise 3
 #name = "María"
 #age = 29
-#city = "Los Angeles"
+#city = "New York"
 
 #print(f'Hi, {name}. You are {age}.')
 #print(f'You live in {city}, but you would love to move to New York. Start a new life there and see how it goes.')

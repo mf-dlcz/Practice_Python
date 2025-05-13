@@ -16,9 +16,15 @@ scienceStudents = ["kenneth", "john", "Zyra", "zoe", "Tesa", "maribel", "celest"
 
 
 # Check how many items are in the list
-for name in range(len(scienceStudents)):
-    name = name + 1
-    print(f"{name}: {scienceStudents[name]}")
+# for name in range(len(scienceStudents)):
+#     name = name + 1
+#     print(f"{name}: {scienceStudents[name]}")
 
-#       Exercise 2:
 
+#       Exercise 2: Using enumerate
+# for i, student in enumerate(scienceStudents):
+#     print(f"{student}")
+
+for student in scienceStudents:
+    newList = student.replace("kenneth", "Lisa").title()
+    print(newList)
