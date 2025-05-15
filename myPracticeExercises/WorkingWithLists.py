@@ -45,10 +45,33 @@ secListOfPets = ["lizard", "mice", "ferret", "snake"]
 
 # extend listOfPets
 listOfPets.extend(secListOfPets)
-print(listOfPets)
+# print(listOfPets)
 
 
 
 """         Popping list Els:
+The pop method removes els from the list.
+
+*** Optionally, you can specify the index of the
+item to remove as a parameter. If no index is specified,
+the last item on the list will be removed.
+"""
+
+# Remove a lost pet from listOfPets - No Index (last item)
+lostPet = listOfPets.pop()
+# print(lostPet)          # Removed Snake since it's the last item
+
+# Remove fish
+removedFish = listOfPets.pop(5)
+# print(removedFish)
+
+# Remove pig
+# print(listOfPets)
+removePig = listOfPets.pop(2)
+# print(removePig)
+
+
+
+"""         Removing List Els:
 
 """
