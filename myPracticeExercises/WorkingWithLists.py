@@ -114,3 +114,56 @@ pets.remove(pets[0])
 pets.clear()
 # print("pets after clear() is", pets)
 
+
+
+"""         Copying Lists:
+It can be useful to create a copy of a list to
+avoid modifing the original list.
+
+Method to create copy is .copy()
+"""
+
+
+#       Exercise: Using .copy()
+todo_List = ["eat", "exercise", "study", "drive to work", "go for a walk", "eat lunch"]
+
+# Creating copy
+# copyOfTodoList = todo_List.copy()
+
+# Creating copy using slicing
+copyOfTodoList1 = todo_List[:]
+# print("To Do List:", todo_List)
+# print("\nCopy:", copyOfTodoList1)
+
+
+#       Converting a tuple to a list
+# tupleToList = list((1, 2, 3))           # <class 'list'>
+# print(type(tupleToList))
+
+#       Creates an empty list
+emptyL = list()                            # <class 'list'>
+# print(type(emptyL))
+
+#       Creates a copy of the existing list
+originalList = [1, 2, 3]
+copyList = list(originalList)
+# print("Original List: ", originalList)
+# print("Copy of Original: ", copyList)
+
+
+#       Modifying List Order:
+
+"""         .sort() & .reverse()
+
+.sort()     -> sorts a list into ascending values by default.
+                If list els are strings, it sorts alphabetically.
+                ** Optionally, the list can be sorted in descending, or
+                reverse alphabetical, order.
+
+.reverse()  ->  reverses the order of a list.
+"""
+
+#           Example:    .sort()
+cities = ["New York", "San Francisco", "Los Angeles", "Orlando", "Phyladelphia", "Saint George", "Albany", "Brooklyn"]
+cities.sort()
+# print(cities)
