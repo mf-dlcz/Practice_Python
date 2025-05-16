@@ -73,5 +73,44 @@ removePig = listOfPets.pop(2)
 
 
 """         Removing List Els:
+Methods to remove el from a list are
+.remove() & .clear()
 
+.remove ()      ->  Reference that item using its matching
+string value or using the list name and position.
+
+.clear()        ->  clears all value from the list.
 """
+
+#       Example: .remove()
+groceryList = ["oatmeal", "avocados", "apples", "bananas", "frozen fruit", "eggs", "milk", "sausages"]
+# print(f"List of groceries: {groceryList}")
+
+# Remove frozen fruit
+groceryList.remove("frozen fruit")
+# print(groceryList)
+
+# Remove apples using its position
+groceryList.remove(groceryList[2])
+# print(groceryList)
+
+#   clear the groceryList
+groceryList.clear()
+# print("Grocery List After .clear(): ", groceryList)
+
+
+# #####  Example 2: .remove()
+pets = ["dog", "cat", "hamster", "iguana", "goldfish"]
+
+# removed goldfish
+pets.remove("goldfish")
+# print ("pets after remove('goldfish') is", pets)
+
+# removes dog
+pets.remove(pets[0])
+# print ("pets after remove(pets[0]) is", pets)
+
+# clear
+pets.clear()
+# print("pets after clear() is", pets)
+
