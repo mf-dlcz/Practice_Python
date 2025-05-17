@@ -71,9 +71,49 @@ work_supplies = {"sticky notes", "paper", "computer"}
 
 #                       .issuperset()
 # returns True if the second set contains ALL the els of the first set      |   converse of .issubset()   |
-print(work_supplies.issuperset(school_supplies))                   # False; ALL els in school_supplies are NOT in work_supplies 
-print(school_supplies.issuperset(work_supplies))                   # True; ALL els in work_supplies are IN school_supplies
+# print(work_supplies.issuperset(school_supplies))                   # False; ALL els in school_supplies are NOT in work_supplies 
+# print(school_supplies.issuperset(work_supplies))                   # True; ALL els in work_supplies are IN school_supplies
 
 
 
 #   ##########################################                      JOINS, UPDATES, & GENERATING NEW SETS:
+"""
+set relationships can be used to join sets together,
+create new sets, and modify the membership of existing
+sets.
+"""
+
+#           .difference()
+# creates a new set that contains the differences between a set & one or more other sets
+
+setA = {"Python", "JavaScript", "PHP"}
+setB = {"Python", "JavaScript", "Java", "C++"}
+
+diff_of_sets = setB.difference(setA)                # {"C++", "Java"}
+diff_of_sets = setA.difference(setB)                # {"PHP"}
+# print(diff_of_sets)
+
+
+#           .difference_update()
+# finds the difference but makes changes to the original set instead of creating a new set
+# setB.difference_update(setA)                        # removed all the els in common and returned only the difference.
+# print(setB)                                         # setB was modified and only contains {"C++", "Java"}
+
+# setA.difference_update(setB)                          # removed all els and kept {"PHP"}
+# print(setA)
+
+
+#   ###########################################                     FINDING THE INTERSECTION:
+
+#           .intersection()
+# finds where sets overlap. It creates a new set that contains common els between two sets.
+
+combination_of_AB = setA.intersection(setB)
+# print(combination_of_AB)
+
+# finds intersection between a set & a list
+setC = {"JavaScript", "TypeScript", "Node.js"}
+listC = ["Python", "JavaScript", "Java"]
+
+intersection_of_cLists = setC.intersection(listC)
+print(intersection_of_cLists)
