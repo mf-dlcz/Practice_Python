@@ -195,6 +195,31 @@ appears in a list.
 """
 
 #           Example 1:
-numbers = [8, 6, 9, 8, 8, 9, 6, 10, 15, 20, 30, 31, 10]
-print(numbers.count(8))         # Returns 3 because the number 8 appears three times in the numbers list: at indices 0, 3, and 4.
+# numbers = [8, 6, 9, 8, 8, 9, 6, 10, 15, 20, 30, 31, 10]
+# print(numbers.count(8))         # Returns 3 because the number 8 appears three times in the numbers list: at indices 0, 3, and 4.
 
+
+
+#   ##########################################          Indexing:
+"""
+The method .index() find the first position of the 
+first list el with a specified value.
+"""
+
+#           Example 1:
+numberz = [0, 1, 3, 5, 7, 20, 10, 11, 20, 16, 18, 5, 9, 4]
+if 4 in numberz:
+    print(numberz.index(4))
+else:
+    print("Value 4 is not in the list.")
+
+
+
+#       #####################################           Determine Membership:
+"""
+in and not in       -> tests whether a value is a member
+of a sequence or collection. Each statement that uses
+a membership operator returns True or False.
+Frequently, the membership operator is used in a conditional
+or loop to control the flow of your program.
+"""
