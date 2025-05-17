@@ -208,11 +208,10 @@ first list el with a specified value.
 
 #           Example 1:
 numberz = [0, 1, 3, 5, 7, 20, 10, 11, 20, 16, 18, 5, 9, 4]
-if 4 in numberz:
-    print(numberz.index(4))
-else:
-    print("Value 4 is not in the list.")
-
+# if 4 in numberz:
+#     print(numberz.index(4))
+# else:
+#     print("Value 4 is not in the list.")
 
 
 #       #####################################           Determine Membership:
@@ -223,3 +222,78 @@ a membership operator returns True or False.
 Frequently, the membership operator is used in a conditional
 or loop to control the flow of your program.
 """
+#       Example 1: Using the numberz list from line 210
+# print(20 in numberz)            # True
+# print(4 in numberz)             # True
+# print(2 in numberz)             # False 2 is not in the list
+# print(20 not in numberz)        # False because 20 is in the list
+# print(2 not in numberz)         # True because 2 is not in the list
+
+
+#   ######################################                  Exercises: List Methods
+# Practicing Python List Methods
+
+# Step 1: Create a list of numbers and a list of fruits.
+numbers = [10, 20, 30, 40, 50]
+fruits = ["cherry", "banana", "apple"]
+
+#      ###       TASK #1: ADD ELS           ###
+# Adding 60 to numbers using .append()
+numbers.append(60)
+# print(numbers)
+
+# Adding "mango" to fruits using insert
+fruits.insert(0, "mango")
+# print(fruits)
+
+#     ###        TASK #2: REMOVE ELS        ###
+# remove banana using .remove()
+fruits.remove("banana")
+
+# remove last el using .pop()
+fruits.pop()
+# print(fruits)
+
+
+#    ###         TASK #3: EXTEND & SORT     ###
+#  combine new list ["peach", "pear"] with fruits using .extend()
+fruits.extend(["peach", "pear"])
+fruits.sort()
+# print(fruits)
+
+#   ###         TASK #4: Combine Methods    ###
+# Create a copy of numbers
+numsCopy = numbers.copy()
+
+# Add 100 to numsCopy
+numsCopy.append(100)
+
+# reverse numsCopy
+numsCopy.reverse()
+# print("\nOriginal List:", numbers)
+# print("\nCopy with modifications:", numsCopy)
+
+
+#   ###          TASK #5: Complex Manipulation      ###
+grocery_List = ["milk", "bread", "eggs", "butter", "cheese"]
+
+# Add yogurt using .append()
+grocery_List.append("yogurt")
+
+# Remove butter using .remove()
+grocery_List.remove("butter")
+
+# Find position of "eggs" using .index() and insert juice before "eggs"
+index = grocery_List.index("eggs")
+# print(index)
+grocery_List.insert(index, "juice")
+grocery_List.sort()
+
+print(grocery_List)
+
+
+"""   #########         .sort()   &   .reverse()            #########
+Returns None because they are modifying the original list not 
+creating and returning a new list
+"""
+print(grocery_List.sort())
