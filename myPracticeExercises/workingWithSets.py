@@ -5,6 +5,9 @@ Sets have unique values.
 Use a set constructor to convert
 a list to a set which will remove the
 duplicate values.
+
+******   set() constructor converts an iterable into
+a set of unordered unique els.      ***********
 """
 
 list = [1, 1, 2, 2, 3, 4, 2, 1, 5, 6, 7, 4, 3, 4, 5, 6]
@@ -46,15 +49,31 @@ collections.
 """
 
 #                       .isdisjoint()   
-# returns True if the indicated sets have NO els in common.
+# returns True if the two sets have no common els
 wild_animals = {"pig", "lion", "koala", "kangaroo"}
 farm_animals = {"cow", "chicken", "sheep", "pig"}
 australian_animals = {"koala", "kangaroo"}
 
-print(farm_animals.isdisjoint(wild_animals))            # False; they have "pig" in common
-print(wild_animals.isdisjoint(australian_animals))      # False; they have "koala" & "kangaroo" in common
-print(farm_animals.isdisjoint(australian_animals))      # True; No els in common
+# print(farm_animals.isdisjoint(wild_animals))            # False; they have "pig" in common
+# print(wild_animals.isdisjoint(australian_animals))      # False; they have "koala" & "kangaroo" in common
+# print(farm_animals.isdisjoint(australian_animals))      # True; No els in common
 
 
 #                       .issubset()     
-# returns True if the first set contains all els of the second set
+# returns True if the first set contains ALL els of the second set
+school_supplies = {"paper", "pen", "sticky notes", "backpack", "computer"}
+camping_supplies = {"tent", "pen", "book", "blanket", "air mattress", "cooler", "sunglasses", "hat"}
+work_supplies = {"sticky notes", "paper", "computer"}
+
+# print(school_supplies.issubset(camping_supplies))               # False; only one item in common
+# print(work_supplies.issubset(school_supplies))                  # True; ALL els are the same
+
+
+#                       .issuperset()
+# returns True if the second set contains ALL the els of the first set      |   converse of .issubset()   |
+print(work_supplies.issuperset(school_supplies))                   # False; ALL els in school_supplies are NOT in work_supplies 
+print(school_supplies.issuperset(work_supplies))                   # True; ALL els in work_supplies are IN school_supplies
+
+
+
+#   ##########################################                      JOINS, UPDATES, & GENERATING NEW SETS:
