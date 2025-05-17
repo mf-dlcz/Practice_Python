@@ -7,8 +7,8 @@ item it's working with using a dot.
 """
 
 
-
-"""         Adding List El:
+#   #####################################               Adding List El:
+"""
 append and insert are two methods used to
 add list els.
 append -> adds items to the end of the list
@@ -48,8 +48,8 @@ listOfPets.extend(secListOfPets)
 # print(listOfPets)
 
 
-
-"""         Popping list Els:
+#       ###############################             Popping list Els:
+"""
 The pop method removes els from the list.
 
 *** Optionally, you can specify the index of the
@@ -71,8 +71,8 @@ removePig = listOfPets.pop(2)
 # print(removePig)
 
 
-
-"""         Removing List Els:
+#   ###################################             Removing List Els:
+"""
 Methods to remove el from a list are
 .remove() & .clear()
 
@@ -115,8 +115,8 @@ pets.clear()
 # print("pets after clear() is", pets)
 
 
-
-"""         Copying Lists:
+#   ###############################                 Copying Lists:
+"""
 It can be useful to create a copy of a list to
 avoid modifing the original list.
 
@@ -151,7 +151,7 @@ copyList = list(originalList)
 # print("Copy of Original: ", copyList)
 
 
-#       Modifying List Order:
+#       ################################            Modifying List Order:
 
 """         .sort() & .reverse()
 
@@ -165,5 +165,36 @@ copyList = list(originalList)
 
 #           Example:    .sort()
 cities = ["New York", "San Francisco", "Los Angeles", "Orlando", "Phyladelphia", "Saint George", "Albany", "Brooklyn"]
-cities.sort()
+# cities.sort()
 # print(cities)
+
+
+#           Example 2:
+# sort alphanumeric string
+my_list = ["car", "boat", "truck", "1", "0", "20", "Car"]
+shoeList = ["sneakers", "Boots", "sandals", "clogs", "Heels", "flats"]
+my_list.sort()
+# print("\nMixed case alphanumeric sort:", my_list)
+
+# sort with optional reverse argument
+my_list.sort(reverse=True)
+shoeList.sort(reverse = True)
+# print("Shoe List Reversed: ", shoeList)
+# print("Sort with optional reverse argument:", my_list)
+
+# sort using reverse method
+groceries = ["apples", "berries", "cabbage"]
+groceries.reverse()
+# print("groceries after reverse()", groceries)
+
+
+#   ###########################################         Counting Els:
+"""         
+.count()    -> finds the number of times an item
+appears in a list.
+"""
+
+#           Example 1:
+numbers = [8, 6, 9, 8, 8, 9, 6, 10, 15, 20, 30, 31, 10]
+print(numbers.count(8))         # Returns 3 because the number 8 appears three times in the numbers list: at indices 0, 3, and 4.
+
