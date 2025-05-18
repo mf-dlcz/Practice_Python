@@ -106,7 +106,8 @@ diff_of_sets = setA.difference(setB)                # {"PHP"}
 #   ###########################################                     FINDING THE INTERSECTION:
 
 #           .intersection()
-# finds where sets overlap. It creates a new set that contains common els between two sets.
+# finds where sets overlap. It CREATES A NEW SET that contains common els between two sets.
+# .intersection() can be used between a set and any other iterable
 
 combination_of_AB = setA.intersection(setB)
 # print(combination_of_AB)
@@ -115,5 +116,18 @@ combination_of_AB = setA.intersection(setB)
 setC = {"JavaScript", "TypeScript", "Node.js"}
 listC = ["Python", "JavaScript", "Java"]
 
-intersection_of_cLists = setC.intersection(listC)
-print(intersection_of_cLists)
+common_set = setC.intersection(listC)
+# print(type(common_set))                             # <class set>
+
+
+#           .intersection_update()
+# finds the intersection and updates the original set.
+
+setD = {"Go", "Python", "TypeScript", "C++", "Java"}
+setM = {"Python", "JavaScript", "TypeScript", "Node.js"}
+
+setD.intersection_update(setM)
+print(setD)
+
+
+#   #########################################                   FINDING THE SYMMETRIC DIFFERENCE
