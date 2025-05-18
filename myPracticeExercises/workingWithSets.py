@@ -123,11 +123,33 @@ common_set = setC.intersection(listC)
 #           .intersection_update()
 # finds the intersection and updates the original set.
 
-setD = {"Go", "Python", "TypeScript", "C++", "Java"}
-setM = {"Python", "JavaScript", "TypeScript", "Node.js"}
+setD = {"Go", "Python", "TypeScript", "C++", "Java", "C#", "Kotlin", "Ruby"}
+setM = {"Python", "JavaScript", "TypeScript", "Node.js", "SQL"}
+setK = {"Ruby", "PHP", "Assembly Language", "C", "Pug", "C#"}
 
-setD.intersection_update(setM)
-print(setD)
+# setD.intersection_update(setM)
+# setM.intersection_update(setD)
+# print(setD)
+# print(setM)
+
+#   #########################################                   FINDING THE SYMMETRIC DIFFERENCE:
+
+#           .symmetric_difference:
+# Keeps the unique els from both sets and removes the common
+# ones from the set you're updating.
+# .symmetric_difference() is the opposite of the .intersection()
+# DOESN"T modify original copy
+
+# diff_of_sets = setD.symmetric_difference(setM)              # returns {"Go", "C++", "Java", "JavaScript", "Node.js"}
+# diff_of_sets_2 = setK.symmetric_difference(setM)            # returns {""}
+# print(f"Difference between set D and set M: \t{diff_of_sets}")
+# print(f"\nDifference between set K and set M: \t{diff_of_sets_2}")
 
 
-#   #########################################                   FINDING THE SYMMETRIC DIFFERENCE
+#       .symmetric_difference_update()
+# modifies original copy.
+# setK.symmetric_difference_update(setD)
+# print(setK)
+
+
+#   ##########################################                  FINDING THE UNION:
