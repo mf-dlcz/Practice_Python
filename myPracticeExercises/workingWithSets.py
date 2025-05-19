@@ -191,4 +191,70 @@ insects = {"ant", "bee", "cricket"}
 
 
 #       .remove()
-# 
+# used to remove an el from the set. Returns an error if el is NOT in the set.
+# insects.remove("bee")
+# print(insects)
+
+
+#       .discard()
+# doesn't return an error if item is not found.
+# insects.discard("cricket")
+# print(insects)
+
+
+#       .pop()
+# removes a random el from a set and returns that value.
+# removed_els = insects.pop()
+# print("The removed el is", removed_els)
+# print("The remaining set ", insects)
+
+
+#       .copy()
+# insects_copy = insects.copy()
+# insects_copy.add("mosquitoes")
+# insects_copy.discard("ant")
+
+# print(insects_copy)
+# print(insects)
+
+
+#       .clear()
+# insects.clear()
+# print(insects)
+
+
+#           EXERCISES: For Practicing Set Methods
+
+# Create initial sets for practice.
+fruits = {"banana", "orange", "mango", "lemon"}
+vegetables = {"tomato", "potato", "cabbage", "onion", "carrot"}
+
+#       TASK 1: Add & Remove els
+# fruits.add("lime")
+# fruits.remove("mango")
+# print(fruits)
+
+
+#       TASK 2: Check membership & clear a set
+# print("carrot" in vegetables)
+
+# fruits.clear()
+# print(fruits)
+
+
+#       TASK 3: Copy & Create new sets
+# fruits_copy = fruits.copy()
+
+# adding "spinach", and "kale" to vegetable set
+# vegetables.update(["spinach", "kale"])
+# print(vegetables)
+
+
+#       TASK 4: Remove items with .pop()
+# removed_el = fruits.pop()
+# print(removed_el)
+
+
+#       TASK 5: clear a set
+fruits.clear()
+print(fruits)
