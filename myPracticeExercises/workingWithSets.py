@@ -153,3 +153,42 @@ setK = {"Ruby", "PHP", "Assembly Language", "C", "Pug", "C#"}
 
 
 #   ##########################################                  FINDING THE UNION:
+"""
+The union of two sets contains ALL the els from both sets.
+Think of it as merging the contents of two containers 
+while automatically getting rid of any duplicates.
+Does not modify the original set. Instead it returns
+a brand-new set that contains the combined unique els.
+
+"""
+
+#       .union()
+# all_els = setK.union(setD)
+# all_els2 = setD.union(setM, setK) 
+# print(all_els)
+# print(all_els2)
+
+
+#       .update()
+# used to modify a set in place by adding els from another set (or any other iterable) into it.
+
+# setD.update(setM)
+# setK.update(setD)
+# print(setD)
+# print(setK)
+
+
+#   #########################################               OTHER SET METHODS:
+"""
+You cannot modify els in a set, but you can add
+or remove els.
+"""
+
+#       .add()
+insects = {"ant", "bee", "cricket"}
+# insects.add("beetles")
+# print(insects)
+
+
+#       .remove()
+# 
