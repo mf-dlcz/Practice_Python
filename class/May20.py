@@ -24,6 +24,7 @@ class Car:
     def info(self):
         return f"This is a {self.year} {self.color} {self.make} with {self.miles_traveled} miles on it."
     
+
 # syntax for inheritance
 class Electric(Car):
 
@@ -32,11 +33,19 @@ class Electric(Car):
         # alternate to using the parent class name
         super().__init__(color, make, year)
         self.battery = battery
+    
+    #overriding method:
+    def fill_gas(self):
+        print("I'm an electric car. I don't need gas!")
 
 
 
 
+my_elec = Electric("White", "T", 2025, 80)
+my_elec.fill_gas()
 
+
+# Creates an object named car1 with attributes
 car1 = Car("Black", "Lexus", 2020)
 
 car1.move_forward(1140)
