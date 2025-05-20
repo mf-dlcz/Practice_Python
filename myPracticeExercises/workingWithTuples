@@ -26,13 +26,76 @@ date (str)
 price (float)
 """
 # Tuple
-purchase = ("product-1", 2, "6-1-2023", 5.99)
+# purchase = ("product-1", 2, "6-1-2023", 5.99)
 
 # extracting "product-1"
-item = purchase[0]
+# item = purchase[0]
 
 # extracting 2
-quantity = purchase[1]
+# quantity = purchase[1]
 
 # print(item)
 # print(quantity)
+
+
+#   ######   unpacking all els of tuple: ######
+
+# have all els you would like to unpack on the left side = name of tuple
+# item, quantity, date, price = purchase
+# print(item)             # "product-1"
+# print(quantity)         # 2
+# print(date)             # "6-1-2023"
+# print(price)            # 5.99
+
+
+
+#   ######   joining tuples:    ######
+# use the addition (+) operator
+# tuple1 = (1, 2, 3, 4, 5)
+# tuple2 = (7, 10, 20, 30, 40)
+
+# combines both tuples into one.
+# combined_tuples = tuple2 + tuple1
+# print(combined_tuples)
+
+
+# repeat the els in a touple (*)
+# repeated_tuple2 = tuple2 * 2
+# print(repeated_tuple2)
+
+
+#                               EXERCISES: Tuple Methods and Operations
+
+# Create initial tuples for practice
+numbers = (1, 2, 3, 4, 1, 2, 3, 4)
+purchase = ("product-1", 2, "6-1-2023", 5.99)
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+
+
+#               TASK 1: Count & Index els in a tuple
+# numbers.count(1)                #  2
+# numbers.index(3)                #  2
+
+
+#               TASK 2: Unpack a tuple (particially)
+# item = purchase[0]
+# quantity = purchase[1]
+
+
+#               TASK 3: Unpack a tuple (full)
+item, quantity, date, price = purchase
+# print(item)
+# print(quantity)
+# print(date)
+# print(price)
+
+
+#               TASK 4: Join two tuples
+# combo_tuple = tuple1 + tuple2
+# print(combo_tuple)
+
+
+#               TASK 5: Repeat a tuple
+repeat_tuple = tuple1 * 3
+print(repeat_tuple)
