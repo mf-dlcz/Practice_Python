@@ -76,6 +76,7 @@ fruit_inventory = {
 inventory_keys = fruit_inventory.keys()
 # print("\nFruit Inventory Keys: \t",inventory_keys)
 
+
 #       .fromkeys()
 """
 - Creates a new dictionary based on the keys in an existing dictionary 
@@ -85,4 +86,65 @@ EX.     {'kiwi': 10, 'apricot': 10, 'pomegranate': 10}
     - Every key value pair has an initial value of 10
 """
 new_store_inventory = fruit_inventory.fromkeys(inventory_keys, 10)
-print("The new_store_inv holds these key-value pairs:", new_store_inventory)
+# print("The new_store_inv holds these key-value pairs:", new_store_inventory)
+
+
+#       .copy()
+# creates a new dictionary from an existing one.
+copy_fruit_inventory = fruit_inventory.copy()
+
+# added a new key, value pair to copy_fruit_inventory
+copy_fruit_inventory["grapes"] = 20
+
+# print("Copy: \t",copy_fruit_inventory)
+# print("\nOriginal: ", fruit_inventory)
+
+
+#   ############################################                   EDITING DICTIONARIES:
+"""
+- To add a new item to the fruit_inventory dictionary
+we can use the .update() method.
+- If a key already exists we can use the .update() to
+update the value.
+"""
+# creating a new key value pair
+fruit_inventory.update({"blueberries": 2})
+# print(fruit_inventory)
+
+# Update an existing value
+fruit_inventory.update({"apricot": 19})
+# print(fruit_inventory)
+
+
+# Remove items:
+#       .pop()
+# variable = dictionary_name.pop("key")        -> Returns an integer
+new_inventory = fruit_inventory.pop("kiwi")
+# print(fruit_inventory)
+
+#       .popitem()
+# removes the last item from the dictionary and stores it in a variable
+last_fruit = fruit_inventory.popitem()
+second_to_last_fruit = fruit_inventory.popitem()
+
+# print("Fruit Inventory: ", fruit_inventory)
+# print("Removed Fruits: ", last_fruit, second_to_last_fruit)
+
+
+#       .clear()
+# removed all items from the dictionary
+fruit_inventory.clear()
+print(fruit_inventory)
+
+
+#   #######################################                     ADDITIONAL PRACTICE:
+
+# Create the inventory dictionary
+vehicle_inventory = {
+    "sedan": 15,
+    "truck": 42,
+    "mini-van": 26,
+    "crossover": 30,
+    "convertible": 31,
+    "Limousine": 3
+}
