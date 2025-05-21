@@ -60,4 +60,29 @@ inventory["raspberry"] = 3
 
 # stored list of tuples in the all_items variable
 all_items = inventory.items()
-print(all_items)
+# print(all_items)
+
+
+#   ###################################################              CREATING & EDITING DICTIONARIES:
+fruit_inventory = {
+    "kiwi": 11,
+    "apricot": 9,
+    "pomegranate": 15,
+    "orange": 4,
+}
+
+#       .keys()
+# copies all the keys to the inventory_keys variable
+inventory_keys = fruit_inventory.keys()
+# print("\nFruit Inventory Keys: \t",inventory_keys)
+
+#       .fromkeys()
+"""
+- Creates a new dictionary based on the keys in an existing dictionary 
+and sets an initial value for all the keys.
+EX.     {'kiwi': 10, 'apricot': 10, 'pomegranate': 10}
+
+    - Every key value pair has an initial value of 10
+"""
+new_store_inventory = fruit_inventory.fromkeys(inventory_keys, 10)
+print("The new_store_inv holds these key-value pairs:", new_store_inventory)
