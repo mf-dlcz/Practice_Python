@@ -134,7 +134,7 @@ second_to_last_fruit = fruit_inventory.popitem()
 #       .clear()
 # removed all items from the dictionary
 fruit_inventory.clear()
-print(fruit_inventory)
+# print(fruit_inventory)
 
 
 #   #######################################                     ADDITIONAL PRACTICE:
@@ -148,3 +148,60 @@ vehicle_inventory = {
     "convertible": 31,
     "Limousine": 3
 }
+
+#           TASK #1: ACCESS KEYS & VALUES
+
+# use .key() to get all the keys in the inventory dictionary
+vehicle_keys = vehicle_inventory.keys()
+# print(vehicle_keys)
+
+# use .values() to get all the values in the inventory dictionary.
+vehicle_values = vehicle_inventory.values()
+# print(vehicle_values)
+
+
+#           TASK #2: USE .get() & ADD A NEW ITEM
+
+# used the .get() to get the value of..
+# print(vehicle_inventory.get("crossover"))
+# print(vehicle_inventory.get("wagon"))
+
+# two ways to add a key, value pair to vehicle_inventory
+vehicle_inventory["Hatchback"] = 19
+# print(vehicle_inventory)
+
+# using .update() to add a key, value pair to vehicle_inventory
+vehicle_inventory.update({"off-road": 21})
+# print(vehicle_inventory)
+
+
+#           TASK #3: COPY & CREATE A NEW DICTIONARY
+
+# creates a copy of vehicle_inventory
+copy_of_vehicle_inventory = vehicle_inventory.copy()
+
+# creates a new dictionary from existing and gives all the values an initial value
+new_vehicle_inventory = vehicle_inventory.fromkeys(vehicle_inventory, 1)
+
+# print("Copy of vehicle inventory: ", copy_of_vehicle_inventory)
+# print("\nNew vehicle inventory", new_vehicle_inventory)
+
+
+#           TASK #4: REMOVE ITEMS
+
+# using .pop() to remove the key, value selected
+# removing mini-vans because everyone purchased one... except me 😂
+# returns the value of the key selected
+removed_miniVans = vehicle_inventory.pop("mini-van")
+# print(vehicle_inventory)
+
+# use .popitem() to remove the last item added to vehicle_inventory
+remove_lastVehicle = vehicle_inventory.popitem()
+# print(vehicle_inventory)
+
+
+#           TASK #5: CLEAR DICTIONARY
+
+# use .clear() to clear vehicle_inventory
+vehicle_inventory.clear()
+print(vehicle_inventory)
