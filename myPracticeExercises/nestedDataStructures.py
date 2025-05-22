@@ -1,3 +1,5 @@
+import json
+
 """
 Nested Data Structures
 """
@@ -73,8 +75,17 @@ books = [
 
 #       GOAL:
 """
-Calculate the average review score.
-Add a new key-value pair to each book's dictionary: 'average_review' 
+- Calculate the average review score.
+- Add a new key-value pair to each book's dictionary: 'average_review' 
 with the calculated average review score (rounded to two decimal places).
 """
 
+# access the key reviews using a for loop
+# this loops through each 
+for book in books:
+    key = book["reviews"]
+
+    average_review = sum(key) / len(key)
+
+    book["average_review"] = round(average_review, 2)
+print(json.dumps(books, indent = 4))
