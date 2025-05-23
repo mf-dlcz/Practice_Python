@@ -43,96 +43,59 @@ students = [
 
 # print (students)
 
+#       .sum()
+"""
+-> Built-in mathematical function that
+returns the sum of all the NUMBERS in an iterable
+"""
 
-#       EXERCISE #2:
+#       .round()
+"""
+-> Built-in mathematical function that returns
+a number rounded to the nearest decimal place
+specified.
+"""
 
-books = [
+#   #######################################         NESTED ITEMS IN EMPLOYEE RECORDS
+
+# Step 1: Create a list of dictionaries to store employee details.
+# Each dictionary should have keys: "name", "age", "position", "department"
+
+employees = [
     {
-        'title': 'The Hitchhiker\'s Guide to the Galaxy',
-        'author': 'Douglas Adams',
-        'genres': ['Science Fiction', 'Comedy'],
-        'reviews': [5, 4, 5, 4, 5]
+        "name": "Michael",
+        "age": 32,
+        "position": "Data Analyst",
+        "department": "Data"
     },
     {
-        'title': 'Pride and Prejudice',
-        'author': 'Jane Austen',
-        'genres': ['Romance', 'Classic'],
-        'reviews': [5, 5, 4, 5, 4]
+        "name": "Elise",
+        "age": 34,
+        "position": "Software Engineer",
+        "department": "IT"
     },
     {
-        'title': '1984',
-        'author': 'George Orwell',
-        'genres': ['Dystopian', 'Science Fiction'],
-        'reviews': [4, 5, 4, 4, 5]
+        "name": "Sophie",
+        "age": 30,
+        "position": "DevOps",
+        "department": "IT"
     },
-    {
-        'title': 'To Kill a Mockingbird',
-        'author': 'Harper Lee',
-        'genres': ['Classic', 'Fiction'],
-        'reviews': [5, 5, 5, 5, 5]
+    {   
+        "name": "William",
+        "age": 33,
+        "position": "Machine Learning Engineer",
+        "department": "Data Science"
     }
 ]
 
-#       GOAL:
-"""
-- Calculate the average review score.
-- Add a new key-value pair to each book's dictionary: 'average_review' 
-with the calculated average review score (rounded to two decimal places).
-"""
+# Step 2: Use a loop to print each employee's name and department.
+# Example output: "John is in the Sales department."
 
-# access the key reviews using a for loop
-# loops through each key in the books dictionary
-# for book in books:
-#     key = book["reviews"]
-
-#     average_review = sum(key) / len(key)
-
-#     book["average_review"] = round(average_review, 2)
-# print(json.dumps(books, indent = 4))
+for employee in employees:
+    # print(f'{employee["name"]} is in the {employee["department"]} department.')
 
 
+# Step 3: Modify the loop to also print each employee's position.
+# Example output: "John is in the Sales department and works as a Manager."
 
-
-#       EXERCISE #3:    
-
-users = [
-    {
-        'username': 'music_lover_1',
-        'email': 'user1@example.com',
-        'playlists': [
-            {'name': 'Chill Vibes', 'songs': ['Song A', 'Song B', 'Song C']},
-            {'name': 'Workout Jams', 'songs': ['Song D', 'Song E']}
-        ]
-    },
-    {
-        'username': 'indie_fan',
-        'email': 'user2@example.com',
-        'playlists': [
-            {'name': 'New Discoveries', 'songs': ['Song F', 'Song G', 'Song H', 'Song I']}
-        ]
-    },
-    {
-        'username': 'rock_n_roller',
-        'email': 'user3@example.com',
-        'playlists': [
-            {'name': '80s Rock', 'songs': ['Song J', 'Song K']},
-            {'name': 'Classic Anthems', 'songs': ['Song L', 'Song M', 'Song N']}
-        ]
-    }
-]
-
-"""         GOAL:
-- Calculate the total number of songs across all their playlists.
-- Add a new key-value pair to each user's dictionary: 'total_songs_listened' 
-with the calculated count.
-"""
-
-for user in users:
-
-    # accessing the playlist key within users & storing it in user_playlist
-    user_playlist = user['playlists']
-
-    for playlist in user_playlist:
-        song = playlist['songs']
-        total = len(song)
-    print(total)
+    print(f'{employee["name"]} is in the {employee["department"]} department and works as a {employee["position"]}.')
