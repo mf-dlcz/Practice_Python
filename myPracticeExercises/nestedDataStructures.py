@@ -61,41 +61,117 @@ specified.
 # Step 1: Create a list of dictionaries to store employee details.
 # Each dictionary should have keys: "name", "age", "position", "department"
 
-employees = [
-    {
+employees1 = {
+        "001": {
         "name": "Michael",
         "age": 32,
         "position": "Data Analyst",
         "department": "Data"
     },
-    {
+        "002": {
         "name": "Elise",
         "age": 34,
         "position": "Software Engineer",
         "department": "IT"
     },
-    {
+        "003": {
         "name": "Sophie",
         "age": 30,
         "position": "DevOps",
         "department": "IT"
     },
-    {   
+        "004": {   
         "name": "William",
         "age": 33,
         "position": "Machine Learning Engineer",
         "department": "Data Science"
     }
-]
+}
 
 # Step 2: Use a loop to print each employee's name and department.
 # Example output: "John is in the Sales department."
 
-for employee in employees:
+# for employee in employees:
     # print(f'{employee["name"]} is in the {employee["department"]} department.')
 
 
 # Step 3: Modify the loop to also print each employee's position.
 # Example output: "John is in the Sales department and works as a Manager."
 
-    print(f'{employee["name"]} is in the {employee["department"]} department and works as a {employee["position"]}.')
+    # print(f'{employee["name"]} is in the {employee["department"]} department and works as a {employee["position"]}.')
+    
+
+
+#   ###############################################             Using Nested Dictionaries:
+
+"""
+- Nested Dictionary:  Dictionary that is contained by another dictionary.
+- By organizing information in nested dictionaries, you can model your data 
+as a hierarchical structure that can include layers of groups and subgroups.
+
+- Use dictionary name and key in bracket notation
+"""
+
+# Accessing William's data:
+# employee_profile = employees["004"]
+
+#Accessing employee name and age
+# print(f'{employee_profile["name"]}, is a {employee_profile["position"]}.')
+
+# Accessing Williams deparment
+# print(f'{employee_profile["name"]} is in the {employee_profile["department"]} department.')
+
+"""
+- Accessing employee 004's age can be done without storing the value in a variable
+- Accessing directly from the main dictionary.
+- It's not practical for the goal of accessing a single nested value.
+
+
+- Start with the name of the outer dictionary. Then, 
+use the key associated with the dictionary that you 
+want to access, followed by the key associated 
+with the nested value.
+"""
+
+# print(employees["004"]["age"])
+
+
+#       EXERCISE: NESTED DICTIONARY OF EMPLOYEES
+
+employees = {
+    "001": {
+        "name": "John",
+        "age": 35,
+        "position": "Manager",
+        "department": "Sales",
+        "location": {
+            "street_address": "123 Main Street",
+            "city": "Anytown",
+            "country": "USA",
+        },
+    },
+    "002": {
+        "name": "Ana",
+        "age": 28,
+        "position": "Engineer",
+        "department": "IT",
+        "location": {
+            "street_address": "456 Any Ave",
+            "city": "Anyville",
+            "country": "USA",
+        },
+    },
+}
+
+#           TASK #1:
+
+# Access & print the name of the employee with ID "001".
+id001 = employees["001"]["name"]
+# print(id001)
+
+# Access and print the city of the employee with ID "002".
+id002 = employees["002"]["location"]["city"]
+print(f'{employees["002"]["name"]} lives in {id002}.')
+
+
+#           TASK #2:
