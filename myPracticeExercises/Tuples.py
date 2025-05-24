@@ -58,7 +58,7 @@ new_tuple = ("zero", "one", "two", "three", "four")
 
 # Step 5: Create a tuple using the tuple constructor to store adoption status options.
 # Example options: "Pending", "Approved", "Rejected"
-adoption_status = tuple(["Pending", "Approved", "Rejected"])
+# adoption_status = tuple(["Pending", "Approved", "Rejected"])
 
 # Step 6: Print the tuple of adoption status options.
-print("Adoption status options:", adoption_status)
+# print("Adoption status options:", adoption_status)
