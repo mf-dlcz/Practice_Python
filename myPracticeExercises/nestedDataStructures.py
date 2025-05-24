@@ -163,7 +163,7 @@ employees = {
     },
 }
 
-#           TASK #1:
+#           TASK #1: Access employee details
 
 # Access & print the name of the employee with ID "001".
 id001 = employees["001"]["name"]
@@ -171,7 +171,47 @@ id001 = employees["001"]["name"]
 
 # Access and print the city of the employee with ID "002".
 id002 = employees["002"]["location"]["city"]
-print(f'{employees["002"]["name"]} lives in {id002}.')
+# print(f'{employees["002"]["name"]} lives in {id002}.')
 
 
-#           TASK #2:
+#           TASK #2: Add a new employee
+"""
+- Add a new employee with ID "003" to the employees dictionary. The employee's details are:
+    Name: "Carlos"
+    Age: 42
+    Position: "Director"
+    Department: "Operations"
+    Location:
+        Street Address: "789 New St"
+        City: "Newtown"
+        Country: "USA"
+- Print the updated employees dictionary.
+"""
+
+employees["003"] = {"name": "Carlos", "Age": "42", "position": "director", "department": "operations", "location": {"street ddress": "789  New St", "city": "Newtown", "country": "USA",}}
+
+# print(json.dumps(employees, indent = 4))
+
+
+#           TASK #3: Update employee details
+
+# Update the position of the employee with ID "001" to "Regional Manager"
+
+employees["001"]["position"] = "Regional Manager"
+# print(json.dumps(employees["001"], indent = 4))
+
+
+#           Task #4: Access nested values
+employee_address = employees["002"]["location"]["street_address"]
+# print(employee_address)
+
+
+#           TASK #5: Delete an employee
+# removed_employee = employees.pop("003")
+# print(json.dumps(employees, indent = 4))
+
+# using del keyword will delete a key
+# keyword dictionary_name["key"]
+
+del employees['001']
+print(json.dumps(employees, indent = 4))
