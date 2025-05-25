@@ -9,10 +9,10 @@ functions to avoid repeating the same code.
 """
 
 #       Example #1: 
-def my_function():
+def my_function3():
     print("I miss you")
 
-# my_function()
+# my_function3()
 
 
 #       #################################               MATH FUNCTIONS: PREDEFINED
@@ -77,7 +77,7 @@ largest_absolute = max(absolute_numbers)
 # print(f"The largest absolute value is: {largest_absolute}")
 
 
-#       ##################################          UNDERSTANDING VARIABLE SCOPE:
+#       ##################################                              UNDERSTANDING VARIABLE SCOPE:
 """
 Local Scope ->  A variable declared within a function
 has local scope.
@@ -127,7 +127,7 @@ my_function1() # output: Local 5
 # print('Global', x) #output: Global 5
 
 
-#       ###########################################                 GLOBAL KEYWORD:
+#       ###########################################                             GLOBAL KEYWORD:
 """
 -   If you need to create a global variable, but are stuck in the local
     scope, you can use the global keyword.
@@ -143,7 +143,7 @@ my_function2()
 # print(x)
 
 
-#       #############################################               EXERCISE:
+#       #############################################                               EXERCISE:
 
 #       Task 1: Fix the scope error
 def calculate_total():
@@ -219,11 +219,87 @@ def display_counter():
 # display_counter()
 
 
-#       ######################################################          NAMING VARIABLES:
+#       ######################################################                      NAMING VARIABLES:
 """
 - Using the same variable names inside and outside a function,
 will be interpreted as two separate variables.
 """
 
 
-#       ######################################################          WORKING WITH ARGUMENTS:
+#       ######################################################                      WORKING WITH ARGUMENTS:
+"""
+- Arguments are the values that Python passes
+to a function when you call it.
+"""
+
+#   EXAMPLE:
+#           PARAMETER
+def welcome(name):
+    print('Hello, ' + name + '!')
+
+#         ARGUMENT
+# welcome('Maria')
+
+
+#       ######################################################                      ARGUMENTS & PARAMETERS:
+"""
+*** The terms parameter & argument both refer to info
+    being passed to a function.
+
+Parameter - variable you list iniside the 
+            parenthesis in a function definition.
+
+Argument -  value that Python sends to the function
+            for that parameter when you call the
+            function.
+"""
+
+
+#           PARAMETER
+def bye(name):
+    print('bye for good, ' + name + '!')
+
+#         ARGUMENT
+# bye('Sean')
+
+
+#       ###################################################                         DEFAULT PARAMETER VALUE:
+"""
+-   If you provide no argument, Python uses the default
+    value, and if you provide an argument, it will
+    overwrite the default value.
+"""
+
+#       EXERCISE:
+
+def my_function4(food = "burgers"):
+  print("My favorite food is " + food)
+
+"""
+Print a message about the programmer's favorite food.
+"""
+# call function4 with 'pizza' as an argument.
+# my_function4("pizza")
+
+# call function4 with 'tacos' as an argument.
+# my_function4("tacos")
+
+# call function4 with no argument.
+# my_function4()
+
+
+#       #####################################################                       USING THE RETURN STATEMENT:
+"""
+-   The return statement returns a value from a function.
+"""
+# Takes x, y as parameters and returns x+y
+def add_numbers(x, y):
+    return x + y
+
+# because you have a result it must be stored in a variable
+result = add_numbers(3,5)
+print(result)
+
+
+
+#       ######################################################                      UNDERSTANDING NAMESPACES:
