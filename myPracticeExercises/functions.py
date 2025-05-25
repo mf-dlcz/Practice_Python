@@ -303,3 +303,35 @@ print(result)
 
 
 #       ######################################################                      UNDERSTANDING NAMESPACES:
+"""
+-   A namespace maps names to objects they represent in a program.
+-   A namespace is sort of like a dictionary where the variable names
+    are the keys and the assigned object is the value.    
+"""
+
+
+"""             Built-in:
+-   Includes the names of all of Python's built in objects like
+    the data types and functions
+"""
+
+
+
+"""             Global:
+-   Includes any name defined within the main program.
+"""
+
+
+
+"""             Local & Enclosing:
+-   The local namespace is for variables that you defined inside
+    functions.
+
+-   The enclosing namespace is created when a function is defined
+    inside another function.
+
+-   Modules, classes and functions all create a local namespace.
+"""
+
+
+#       ###########################################################                         POSITIONAL ARGUMENTS:
