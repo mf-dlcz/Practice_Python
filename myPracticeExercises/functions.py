@@ -298,7 +298,7 @@ def add_numbers(x, y):
 
 # because you have a result it must be stored in a variable
 result = add_numbers(3,5)
-print(result)
+# print(result)
 
 
 
@@ -335,3 +335,68 @@ print(result)
 
 
 #       ###########################################################                         POSITIONAL ARGUMENTS:
+"""
+-   Positional arguments -  are arguments passed to a function in a
+    specific order, where the position of the argument determines its
+    meaning.
+-   The order of arguments matter when using positional argument.
+"""
+
+def my_friend(friend_name, friend_city):
+    """
+    Take in two parameters, `friend_name` and `friend_city`,
+    and print a message stating your friend with name `friend_name`
+    lives in `friend_city`.
+    """
+    print(f"My friend {friend_name} lives in {friend_city} city.")
+
+# my_friend('Maria','New York')
+
+
+
+def my_sister(sisters_name, sisters_job):
+    print(f'My sister, {sisters_name} is a/an {sisters_job}.')
+
+# my_sister('Nail Tech', 'Fer')
+
+
+
+#       ##########################################################                          Keyword Arguments:
+"""
+Keyword Arguments - Are a way to pass arguments to a function by
+                    explicitly specifiying the parameter names
+                    along with their values.
+                -   Are not dependent on the order in which you pass
+                    them.
+"""
+
+def my_friend2(friend2_name, friend2_city):
+    print(f"My friend {friend2_name} lives in {friend2_city}.")
+
+#       KEYWORD ARGUMENT:
+# my_friend2(friend2_name = 'Becky', friend2_city = 'Brookly')
+
+
+#       ###########################################################                         PASSING AN ARBITRARY # OF ARGUMENTS:
+"""
+-   In some cases, you might NOT know ahead of time how many arguments
+    a function will need to accept.
+-   It's permitted to pass an arbitrart number of arguments.
+
+        *args(arbitrary arguments)
+-   Use the *args variable to pass a variable number of arguments to a
+    function.
+-   Use *args to send a non-keyworded variable length argument list to a
+    function.
+"""
+
+
+#       EXAMPLE:
+def my_colors(*args):
+    for color in args:
+        print(color)
+
+my_colors('red', 'orange', 'blue', 'grey')
+
+
+#       ##############################################################                      **kwargs (ARBITRARY KEYWORD ARGUMENTS):
