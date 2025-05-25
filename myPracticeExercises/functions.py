@@ -75,3 +75,32 @@ for numb in numbers_2:
 
 largest_absolute = max(absolute_numbers)
 # print(f"The largest absolute value is: {largest_absolute}")
+
+
+#       ##################################          UNDERSTANDING VARIABLE SCOPE:
+"""
+Local Scope ->  A variable declared within a function
+has local scope.
+- You can ONLY access that variable within that function and not
+outside of it.
+"""
+
+#       local scope:
+def my_function():
+    """
+    Assign a value of 5 to a local 
+    variable 'x' and print its value.
+    """
+    x = 5
+    print('Local', x)
+
+# my_function() # output: Local 5
+
+# try to access variable outside of function
+# print(x) # output: error
+
+
+#       global scope:
+"""
+
+"""
