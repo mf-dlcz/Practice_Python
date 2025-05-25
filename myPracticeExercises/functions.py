@@ -119,12 +119,12 @@ def my_function1():
   """
   x = 5
 
-  print('Local', x)
+#   print('Local', x)
 
 my_function1() # output: Local 5
 
 # try to access variable outside of function
-print('Global', x) #output: Global 5
+# print('Global', x) #output: Global 5
 
 
 #       ###########################################                 GLOBAL KEYWORD:
@@ -140,30 +140,45 @@ def my_function2():
 
 my_function2()
 
-print(x)
+# print(x)
 
 
 #       #############################################               EXERCISE:
+
 #       Task 1: Fix the scope error
 def calculate_total():
     subtotal = 50
     tax = 0.1
-    total = None  # Calculate total using subtotal and tax
-    
-print("The total is:", total)  # This line should print the total
+    total = (subtotal * tax) + subtotal
+    print("The total is:", total)  # This line should print the total
 
+# calculate_total()
+
+
+#   -------------------------------------------------------
 
 #       Task 2: Create and modify a global variable
 score = 0  # This is your global variable
 
 def update_score():
     # Add 10 points to the score
-    pass  # Replace this with your code
+    global score
+    score += 10
+    print(score)
 
 def double_score():
     # Double the current score
-    pass  # Replace this with your code
+    global score
+    score *= 2
+    print(score)
 
+# print('initial score', score)
+# update_score()
+# print('after update', score)
+# double_score()
+# print('after double', score)
+
+#   ------------------------------------------------------
 
 #       Task 3: Understanding variable shadowing
 name = "Alex"
@@ -172,9 +187,11 @@ def change_name():
     name = "Sam"  # This creates a local variable
     print("Inside function:", name)
 
-change_name()
-print("Outside function:", name)
+# change_name()
+# print("Outside function:", name)
 
+
+#   ------------------------------------------------------
 
 #       Task 4: Using the global keyword
 counter = 0
@@ -182,8 +199,31 @@ counter = 0
 def increment_counter():
     # Use the global keyword to modify the counter
     # Add 1 to counter
-    pass  # Replace this with your code
+    global counter
+    counter += 1
 
 def display_counter():
     # Print the current value of the counter
-    pass  # Replace this with your code
+    print('Counter: ',counter)
+
+# increment_counter()
+# display_counter()
+
+# increment_counter()
+# display_counter()
+
+# increment_counter()
+# display_counter()
+
+# increment_counter()
+# display_counter()
+
+
+#       ######################################################          NAMING VARIABLES:
+"""
+- Using the same variable names inside and outside a function,
+will be interpreted as two separate variables.
+"""
+
+
+#       ######################################################          WORKING WITH ARGUMENTS:
