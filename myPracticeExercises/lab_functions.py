@@ -1,3 +1,5 @@
+import json
+
 """
     CHECKING NUMBERS:
 """
@@ -69,19 +71,50 @@ def update_high_score():
 #       ************************************************************
 
 #       Task 3: Track player statistics
-def record_player_stats():
+def record_player_stats(player_name, **stats):
     # Parameters: player_name, **stats
     # Stats should include: rounds_played, wins, losses
     # Use abs() to ensure all stats are positive numbers
     # Store in player_stats dictionary
-    pass
+    positive_stats = {}
+    for key, value in stats.items():
+        positive = abs(value)
+        positive_stats[key] = positive
+    player_stats[player_name] = positive_stats
+    return player_stats
+
+result = record_player_stats("Maria",rounds_played = 10, wins = 7, losses = 3)
+print(json.dumps(result, indent = 4))
 
 #       ************************************************************
 
 #       Task 4: Generate player report
-def generate_report():
+#               PARAMETER
+def generate_report(player_name):
     # Parameter: player_name
     # Return None if player not found
     # Calculate win percentage (wins / rounds_played)
     # Return formatted string with player stats
-    pass
+    if player_name not in player_stats:
+        return None
+    
+    stats = player_stats[player_name]
+    wins = stats.get('wins', 0)
+    rounds = stats.get('rounds_played', 0)
+    losses = stats.get('losses', 0)
+    if rounds > 0:     
+        win_percentage = (wins / rounds * 100)
+    else:
+        win_percentage = 0
+
+    return f"""
+        Player: {player_name}
+        Rounds Player: {rounds}
+        Wins: {wins}
+        Losses: {losses}
+        Win Percentage = {win_percentage}%
+        """
+
+#                           ARGUMENT                        
+result_2 = generate_report('Maria')
+print(result_2)
