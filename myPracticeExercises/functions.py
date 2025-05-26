@@ -421,26 +421,36 @@ def user_info(**kwargs):
     for key, value in kwargs.items(): 
 	    print(f"{key}: {value}") 
 
-user_info(Name="Jane", Age=33, City="Paris", Language="French")
+# user_info(Name="Jane", Age=33, City="Paris", Language="French")
 
 
 #       ################################################################                    PRACTICE EXERCISES:
 
 #       Task 1: Working with required parameters
-def create_profile():
+def create_profile(name, age, city):
     # Add parameters: name, age, city
     # Return them in a formatted string
-    pass
+    return f'Name: {name}, \nAge: {age}, \nCity: {city}'
 
+# alice_profile = create_profile('Alice', 25, 'New York')
+# print(alice_profile)
 
+#   *****************************************************************
 
 #       Task 2: Using default parameter values
-def calculate_interest():
+def calculate_interest(principal, rate = 0.05, years = 1):
     # Add parameters: principal, rate=0.05, years=1
     # Calculate and return simple interest (principal * rate * years)
-    pass
+    return principal * rate * years
 
+interest = calculate_interest(1000)
+interest_2 = calculate_interest(1000, 0.07)
+interest_3 = calculate_interest(1000, 0.07, 2)
+# print(interest)
+# print(interest_2)
+# print(interest_3)
 
+#   ******************************************************************
 
 #       Task 3: Mixing positional and keyword arguments
 def make_pizza():
