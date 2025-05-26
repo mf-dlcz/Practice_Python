@@ -1,4 +1,5 @@
 #                       Functions:
+
 """
 Functions are blocks of code that perform a specific task. Functions give you the 
 option to break your code into reusable, smaller pieces. A function takes in an 
@@ -36,6 +37,7 @@ Arguments are the values that Python passes to a function when you call them.
 
 
 #                       Passing a variable number of arguments:
+
 """
 •   Use the *args function definition to pass a variable number of arguments to a function. 
     You use *args to send a non-keyworded variable length argument list to a function.
