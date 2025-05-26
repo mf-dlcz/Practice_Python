@@ -453,15 +453,21 @@ interest_3 = calculate_interest(1000, 0.07, 2)
 #   ******************************************************************
 
 #       Task 3: Mixing positional and keyword arguments
-def make_pizza():
+def make_pizza(size, crust_type,*toppings):
     # Add parameters: size, crust_type, *toppings
     # Return a string listing the pizza details and all toppings
-    pass
+    return f'A {size} pizza with {crust_type} curst topped with: {toppings}'
 
+# first_pizza = make_pizza('large', 'thin', 'mushrooms', 'pepperoni', 'olives')
+# print(first_pizza)
 
+#   ******************************************************************
 
 #       Task 4: Create a function that accepts any number of key-value pairs
-def print_user_info():
+def print_user_info(**kwargs):
     # Use **kwargs to accept any number of user details
     # Print each detail on a new line in "key: value" format
-    pass
+    for key, value in kwargs.items():
+        print(f'{key}: {value}')
+
+print_user_info(name = 'Bob', age = 30, email = 'bob@email.com', phone = '555-1234' )
