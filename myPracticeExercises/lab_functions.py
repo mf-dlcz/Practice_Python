@@ -83,8 +83,8 @@ def record_player_stats(player_name, **stats):
     player_stats[player_name] = positive_stats
     return player_stats
 
-result = record_player_stats("Maria",rounds_played = 10, wins = 7, losses = 3)
-print(json.dumps(result, indent = 4))
+# result = record_player_stats("Maria",rounds_played = 10, wins = 7, losses = 3)
+# print(json.dumps(result, indent = 4))
 
 #       ************************************************************
 
@@ -116,5 +116,18 @@ def generate_report(player_name):
         """
 
 #                           ARGUMENT                        
-result_2 = generate_report('Maria')
-print(result_2)
+# result_2 = generate_report('Maria')
+# print(result_2)
+
+print("Testing round score calculation:")
+print(calculate_round_score(100))  # Base points only
+print(calculate_round_score(100, 2))  # With multiplier
+print(calculate_round_score(100, 2, 10, 20, 30))  # With bonus points
+
+print("\nTesting high score update:")
+current_score = 1000
+print(f"New high score: {update_high_score()}")
+
+print("\nTesting player stats recording and reporting:")
+record_player_stats("Player1", rounds_played=10, wins=7, losses=3)
+print(generate_report("Player1"))
