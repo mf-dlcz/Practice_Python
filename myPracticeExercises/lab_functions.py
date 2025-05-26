@@ -41,18 +41,32 @@ player_stats = {}
 
 #       Task 1: Create a function that calculates player's round score
 def calculate_round_score(base_points, multiplier = 1, *bonus_points):
-    # Parameters: base_points, multiplier=1, *bonus_points
-    # Use pow() for multiplier and add sum of bonus points
-    # Return the total round score
-    # 
-    pass
+#     # Parameters: base_points, multiplier=1, *bonus_points
+#     # Use pow() for multiplier and add sum of bonus points
+#     # Return the total round score
+        score = pow(base_points, multiplier)
+        if bonus_points:
+            score += sum(bonus_points)
+        return score
+
+# print(calculate_round_score(100))
+# print(calculate_round_score(100, 2))
+# print(calculate_round_score(100, 2, 10, 20, 30))
+
+#       ************************************************************
 
 #       Task 2: Update the high score if necessary
 def update_high_score():
     # Use global keyword for high_score and current_score
     # Use max() to compare current_score with high_score
     # Update high_score if current_score is higher
-    pass
+    global high_score, current_score
+    high_score = max(current_score, high_score)
+    return high_score
+
+# print(update_high_score())
+
+#       ************************************************************
 
 #       Task 3: Track player statistics
 def record_player_stats():
@@ -61,6 +75,8 @@ def record_player_stats():
     # Use abs() to ensure all stats are positive numbers
     # Store in player_stats dictionary
     pass
+
+#       ************************************************************
 
 #       Task 4: Generate player report
 def generate_report():
