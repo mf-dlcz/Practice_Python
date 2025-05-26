@@ -396,7 +396,62 @@ def my_colors(*args):
     for color in args:
         print(color)
 
-my_colors('red', 'orange', 'blue', 'grey')
+# my_colors('red', 'orange', 'blue', 'grey')
 
 
 #       ##############################################################                      **kwargs (ARBITRARY KEYWORD ARGUMENTS):
+"""
+**kwargs -  is a special syntax in Python that gives you the option
+            to pass an arbitrary number of arguments in a function.
+        -   lets you pass keyword arguments to a function.
+        -   when you use **kwargs in your function definition it allows the
+            function to accept an arbitrary number of keyword arguments.
+    *   -   Python passes these keyword arguments as a dictionary, where
+    *       the keys are the arguments names and the values are the argument
+    *       values.
+"""
+
+#           EXAMPLE:
+def user_info(**kwargs): 
+
+    """
+    Take in keyword arguments as inputs and print 
+    out the key-value pairs.
+    """
+    for key, value in kwargs.items(): 
+	    print(f"{key}: {value}") 
+
+user_info(Name="Jane", Age=33, City="Paris", Language="French")
+
+
+#       ################################################################                    PRACTICE EXERCISES:
+
+#       Task 1: Working with required parameters
+def create_profile():
+    # Add parameters: name, age, city
+    # Return them in a formatted string
+    pass
+
+
+
+#       Task 2: Using default parameter values
+def calculate_interest():
+    # Add parameters: principal, rate=0.05, years=1
+    # Calculate and return simple interest (principal * rate * years)
+    pass
+
+
+
+#       Task 3: Mixing positional and keyword arguments
+def make_pizza():
+    # Add parameters: size, crust_type, *toppings
+    # Return a string listing the pizza details and all toppings
+    pass
+
+
+
+#       Task 4: Create a function that accepts any number of key-value pairs
+def print_user_info():
+    # Use **kwargs to accept any number of user details
+    # Print each detail on a new line in "key: value" format
+    pass
