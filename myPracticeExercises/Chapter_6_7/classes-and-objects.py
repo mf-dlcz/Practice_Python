@@ -48,6 +48,39 @@ import json
 
 #       ############################################################################                EXPLORING OBJECTS & NOTATION:
 '''
-    1.  What are objects?
-        
+    .   What are objects?
+                Almost everything is an object in Python. An object is a collection of data
+                (attributes) and the functions(methods) that operate on that data. 
+'''
+
+'''
+#*  To access the attributes and methods for a given object use dot notation.
+#*  EXAMPLE:
+#*          object_name.method_or_attribute_name
+'''
+
+
+#       inspecting objects:
+'''
+-   use the dir() function to view the available attributes and methods for an object
+'''
+
+
+my_list = {10, 11, 4, 20}
+
+for attribute_or_method in dir(my_list):
+    # returns a list of attributes or methods available to the object my_list
+    print(attribute_or_method)
+
+
+#       #########################################################################               CREATING CLASSES & OBJECTS:
+'''
+#*                            Reasons to use classes and objects:
+
+1.  Better Organization:
+                        . Use classes to organize your code into logical and reusable blocks.
+                        . You can establish relationships among objects and represent the behaviors
+                        and properties of the specific objects that you want to model in your code.
+2.  Code Reusability:
+                        . 
 '''
