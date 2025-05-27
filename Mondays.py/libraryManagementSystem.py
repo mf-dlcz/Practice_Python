@@ -25,7 +25,7 @@ borrow_book(title, borrower_name): Marks a book as borrowed
 return_book(title): Marks a book as returned
 '''
 
-class book:
+class Book:
     
     def __init__(self, title, author, isbn):
         self.title = title
@@ -48,9 +48,10 @@ class Library:
             self.books.append(book_object)
             self.total_books = self.total_books + 1
 
-    def remove_book(self, title_book):
-        if title_book in self.books:
-            title_book.remove()
+    def remove_book(self, book_object):
+        if book_object in self.books:
+            self.books.remove(book_object)
+        print(book_object)
 
     def borrow_book(self, booktitle, borrower):
         #should check if the title of the book exists
@@ -71,28 +72,35 @@ class Library:
         return "Book not found"            
         
     def return_book(self, booktitle):
-        pass
+        for each_book in self.books:
+            if each_book.title == booktitle:
+                each_book.is_borrowed = False
+                each_book.borrower_name = ''
+                self.borrowed_books = self.borrowed_books-1
+                return f'{booktitle} was returned.'
+        return f'{booktitle} was not found.'    
             
 #create book objects
-book1 = book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565")
-book2 = book("To Kill a Mockingbird", "Harper Lee", "9780446310789")
+the_great_gatsby = Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565")
+to_kill_a_mockingbird = Book("To Kill a Mockingbird", "Harper Lee", "9780446310789")
 
 # print(book1.author)
 # print(book2.is_borrowed)
 #create a library object
 library_object = Library()
-library_object.add_book(book1)
-library_object.add_book(book2)
+library_object.add_book(the_great_gatsby)
+library_object.add_book(to_kill_a_mockingbird)
 # print(library_object.books)
 
 # for each_book in library_object.books:
 #     print(each_book.isbn)
 #     print(each_book.is_borrowed)
 
-print(library_object.borrow_book("To Kill a Mockingbird", "Dr.K"))
-print(library_object.borrow_book("Atomic Habits", "Maria"))
-print(library_object.remove_book("To Kill a Mockingbird"))
-print(book2.is_borrowed, book2.borrower_name)
+print(library_object.borrow_book(f"To Kill a Mockingbird", "Dr.K"))
+print(library_object.borrow_book(f"Atomic Habits", "Maria"))
+print(library_object.remove_book(to_kill_a_mockingbird))
+print(to_kill_a_mockingbird.is_borrowed, to_kill_a_mockingbird.borrower_name)
+print(library_object.return_book("Atomic Habits"))
 # print(library_object.borrow_book("To Kill a Mockingbird", "Dr.K"))
 
 print(library_object.borrow_book("The Wizard of Oz", "Dr.K"))
