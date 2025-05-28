@@ -208,3 +208,18 @@ your_dog.bark()
 print(f"{your_dog.name}'s tricks: {your_dog.tricks}")
 '''
 
+
+#           Challenge: Defining a new class
+class BankAccount:
+    def __init__(self, opening_deposit):
+        self.account_number = ""
+        self.balance = opening_deposit
+    
+    def deposit(self):
+        pass
+
+    def withdraw(self):
+        pass
+
+    def account_balance(self):
+        pass
