@@ -1,0 +1,1 @@
+print("wk8_name_module: my namespace is", __name__)
