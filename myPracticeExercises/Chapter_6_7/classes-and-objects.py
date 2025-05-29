@@ -34,6 +34,8 @@ import json
 -   Attributes describe an object's state.
 -   This can be something descriptive like color or size.
 -   Or, it could reflect of state of being, like 'on' or 'off'
+-   INSTANCE ATTRIBUTES BELONG TO A SPECIFIC OBJECT INSTEAD OF THE
+    WHOLE CLASS OF OBJECTS.
 '''
 
 
@@ -207,6 +209,26 @@ your_dog.bark()
 #? This line tries to print tricks for 'your_dog' (which hasn't learned any yet).
 print(f"{your_dog.name}'s tricks: {your_dog.tricks}")
 '''
+
+
+#           ###################################################################                                         * NOTES:
+
+#             DEFINING INSTANCE ATTRIBUTES:
+'''
+-   The constructor is created with one of the special dunder methods (__init__).
+-   The __init__ function builds your object.
+-   It's called automatically when an object of a class is created and it assigns
+    the starting attributes and methods that make up your object.
+-   The __init__ function takes an argument, named self, that refers to the
+    instance of the object being created.
+-   The self argument can be used to assign attribute values to an object on
+    creation.
+-   When a class is instantiated, the __init__ function runs and assigns the values
+    passed in as arguments to the attributes named in the class definition.
+-   Your class can include a mix of class and instance attributes.
+
+'''
+
 
 
 #           Challenge: Defining a new class
