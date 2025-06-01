@@ -254,3 +254,16 @@ class BankAccount:
 
 
 # Testing my code
+
+# create an instance of an object
+marias_bank_account = BankAccount(0)
+
+marias_bank_account.deposit(500)
+print(f'I deposited ${marias_bank_account.balance}')
+
+marias_bank_account.withdraw(200)
+withdrawal_amount = 200
+print(f'I withdrew ${withdrawal_amount} from my account. My current balance is ${marias_bank_account.balance}')
+
+
+#       ###########################################################             
