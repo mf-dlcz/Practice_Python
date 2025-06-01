@@ -135,8 +135,8 @@ e1 = Employee()
 # Change the hire date to 09/01/2023.
 employee_maria.status = 'onboarding'
 employee_maria.hire_date = '09/01/2023'
-print(employee_maria.status)
-print(employee_maria.hire_date)
+# print(employee_maria.status)
+# print(employee_maria.hire_date)
 
 
 
@@ -226,22 +226,31 @@ print(f"{your_dog.name}'s tricks: {your_dog.tricks}")
 -   When a class is instantiated, the __init__ function runs and assigns the values
     passed in as arguments to the attributes named in the class definition.
 -   Your class can include a mix of class and instance attributes.
-
 '''
 
 
 
 #           Challenge: Defining a new class
 class BankAccount:
-    def __init__(self, opening_deposit):
-        self.account_number = ""
-        self.balance = opening_deposit
+    number_of_accounts = 0
+
+    def __init__(self, balance):
+        account_number = BankAccount.number_of_accounts + 1
+        self.account_number = str(account_number)
+        BankAccount.number_of_accounts += 1
+        self.balance = balance
     
-    def deposit(self):
-        pass
+    def deposit(self, deposit_amount):
+        self.balance += deposit_amount
 
-    def withdraw(self):
-        pass
-
+    def withdraw(self, withdraw_amount):
+        if self.balance < withdraw_amount:
+            print('Insufficient funds.')
+        else:
+            self.balance -= withdraw_amount
+        
     def account_balance(self):
-        pass
+        return f'Your current balance is ${self.balance}'
+
+
+# Testing my code
