@@ -29,7 +29,7 @@ import json
 
 
 
-#               Attribues:
+#               Attributes:
 '''
 -   Attributes describe an object's state.
 -   This can be something descriptive like color or size.
@@ -88,7 +88,7 @@ import json
                         . After defining a class you can create objects from the class without having
                         to rewrite any of the universal characteristics or tools that define the class.
 
-3.  Easier Code Maintenence:
+3.  Easier Code Maintenance:
                         . Classes provide a way to break down complex systems into smaller, more manageable
                         modular units.
                         . You can target your fixes to the affected classes without affecting the broader
@@ -101,7 +101,7 @@ class Employee:
     status = 'active'
 
 
-#* instanciating an object
+#* instantiating an object
 new_employee = Employee()
 
 
