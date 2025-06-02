@@ -1,6 +1,6 @@
 #       EMPLOYEE SOCIAL NETWORKING APPLICATION
 
-
+# Employee class
 class Employee:
     # class attribute to track current number of employees
     employee_count = 0
@@ -17,14 +17,22 @@ class Employee:
         self.hire_date = hire_date
         Employee.employee_count += 1
         
-        # initates an empty list to hold all posts
-        self.posts = []
+        self.posts = []                  # initializes an empty list to hold all posts
+        self.comments = []               # initializes an empty list to hold all comments
 
+    # Creates a new post
     def post_message(self, message):
         post = Post(self, message)
         self.posts.append(post)
         return post
 
+    # creates a new comment in a post
+    def comment_on_post(self, message, post):
+        comment = Comment(self, message, post)
+        post.comments.append(comment)               # comment is added to the comments list
+        self.comments.append(comment)               # appends comment to the employee object
+
+# Post Class
 class Post:
 
     #constructor
@@ -38,24 +46,48 @@ class Post:
     def edit_post(self, new_comment):
         self.message = new_comment
 
+# Comment class
+class Comment:
+
+    # Constructor
+    def __init__(self, author, message, post):
+        self.author = author
+        self.message = message
+        self.post = post
+
+    def edit_message(self, new_message):
+        self.message = new_message
 
 """
 Testing my classes
 """
 # create a new employee
 e1 = Employee("Mary Major", "mary.major@example.com", "07/12/2021")
+e2 = Employee("Pat Candella", "pat.candella@example.com", "12/1/2022")
 
 # Use the post message method to create new Post objects
-e1.post_message("hello")
+intro_message = e2.post_message("Hi all! So excited to be joining the company!")
 
-# Capture the function return in a variable so you can reference the Post
-second_post = e1.post_message("second message")
+# Use the returned post to comment on the message
+e1.comment_on_post("Welcome to the team!", intro_message)
+e2.comment_on_post("Thanks!", intro_message)
 
-# Use the edit message method from the Post class to edit the message
-second_post.edit_post("edited message")
 
-# Check post to see that it includes the Employee as author
-print (second_post.author.name)
+# Another example of a new post with comment exchange
+workshop_post = e1.post_message("I just attended a workshop.")
 
-# Use a list comprehension to print each message on the Employee's posts list. 
-print ([post.message for post in e1.posts])
+e2.comment_on_post("Cool! What was the workshop about?", workshop_post)
+e1.comment_on_post("Python classes and objects", workshop_post)
+
+print ("Mary's posts are",[post.message for post in e1.posts])
+print ("Pat's posts are", [post.message for post in e2.posts])
+
+print ("-" * 50)
+
+print ("Mary's comments are",[comment.message for comment in e1.comments])
+print ("Pat's comments are",[comment.message for comment in e2.comments])
+
+print ("-" * 50)
+
+print ("Intro message comments are",[comment.message for comment in intro_message.comments])
+print ("Workshop post comments are", [comment.message for comment in workshop_post.comments])

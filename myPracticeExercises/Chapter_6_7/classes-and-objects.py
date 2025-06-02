@@ -269,7 +269,7 @@ print(f'I withdrew ${withdrawal_amount} from my account. My current balance is $
 #       ###########################################################             ADDITIONAL DUNDER METHODS:
 
 '''
-            __str__()
+            __str__() method:
 . Is used to show a string representation of your object that can be
 read easily by end users.
 . It's called automatically when you can print() or str() on an object.
@@ -284,3 +284,27 @@ def __str__(self):
     return f"Employee: {self.name}\nHire date:{self.hire_date}"
 '''
 
+
+
+'''
+            __repr__() method:
+. This method is meant more for development and debugging than end users.
+. It can be useful for changing how the object is represented in code when
+the object is not directly called by a print() or str() method.
+'''
+
+#   EXAMPLE:
+'''
+def __repr__(self):
+    """
+    Method that returns identifying information on the object
+    """
+    return f"Employee object repr {self.name}"
+
+print(repr(e1))
+
+# Expected Output:
+Employee object repr Mary Major
+
+# ***NOTE: Calling print() on the object alone would call the __str__() method.
+'''
