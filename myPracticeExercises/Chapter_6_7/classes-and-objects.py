@@ -266,4 +266,21 @@ withdrawal_amount = 200
 print(f'I withdrew ${withdrawal_amount} from my account. My current balance is ${marias_bank_account.balance}')
 
 
-#       ###########################################################             
+#       ###########################################################             ADDITIONAL DUNDER METHODS:
+
+'''
+            __str__()
+. Is used to show a string representation of your object that can be
+read easily by end users.
+. It's called automatically when you can print() or str() on an object.
+'''
+
+#   EXAMPLE:
+'''
+def __str__(self):
+    """
+    Method that returns a string describing the object
+    """
+    return f"Employee: {self.name}\nHire date:{self.hire_date}"
+'''
+
