@@ -40,6 +40,16 @@ class Engineer(Employee):
         super().__init__(name, email, hire_date)
         self.department = 'engineering'
 
+    def comment_on_post(self, message, post):           # overrides the parent comment_on_post method
+        if post.author.department is 'engineering':
+            points = 1
+        else:
+            points = 5
+        comment = Comment(self, message, post)
+        self.total_score += points
+        post.comments.append(comment)                   # appends comment to the post object
+        self.comments.append(comment)                   # appends comment to the Employee Object
+        return comment
 
 class Marketer(Employee):
     def __init__(self, name, email, hire_date):
