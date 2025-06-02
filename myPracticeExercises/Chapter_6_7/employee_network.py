@@ -34,11 +34,15 @@ class Employee:
 
                                         # Subclasses:
 class Engineer(Employee):
-
+    def __init__(self, name, email, hire_date):
+        super().__init__(name, email, hire_date)
+        self.department = 'engineering'
 
 
 class Marketer(Employee):
-
+    def __init__(self, name, email, hire_date):
+        super().__init__(name, email, hire_date)
+        self.department = 'marketing'
 
                                         # Post Class
 class Post:
@@ -68,21 +72,19 @@ class Comment:
 
 
 
-
-
-
-
-
-
-
-
-
 """
-Testing my classes
+                                                            Testing:
 """
 # create a new employee
 e1 = Employee("Mary Major", "mary.major@example.com", "07/12/2021")
 e2 = Employee("Pat Candella", "pat.candella@example.com", "12/1/2022")
+engineer1 = Engineer('Michael Mike', 'michael.mike@example.com', '06/1/2023')
+marketer1 = Marketer('Arisa Blank', 'arisa.blank@example.com', '08/15/22')
+
+print(f'Name: {engineer1.name} Email: {engineer1.email} Hire Date: {engineer1.hire_date}')
+print(f'Name: {marketer1.name} Email: {marketer1.email} Hire Date: {marketer1.hire_date}')
+
+# print(f'EMPLOYEE COUNT: {Employee.employee_count}')
 
 # Use the post message method to create new Post objects
 intro_message = e2.post_message("Hi all! So excited to be joining the company!")
