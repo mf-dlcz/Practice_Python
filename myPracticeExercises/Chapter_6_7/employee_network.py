@@ -1,6 +1,6 @@
 #       EMPLOYEE SOCIAL NETWORKING APPLICATION
 
-# Employee class
+                                        # Employee class
 class Employee:
     # class attribute to track current number of employees
     employee_count = 0
@@ -32,7 +32,15 @@ class Employee:
         post.comments.append(comment)               # comment is added to the comments list
         self.comments.append(comment)               # appends comment to the employee object
 
-# Post Class
+                                        # Subclasses:
+class Engineer(Employee):
+
+
+
+class Marketer(Employee):
+
+
+                                        # Post Class
 class Post:
 
     #constructor
@@ -46,7 +54,7 @@ class Post:
     def edit_post(self, new_comment):
         self.message = new_comment
 
-# Comment class
+                                        # Comment class
 class Comment:
 
     # Constructor
@@ -57,6 +65,17 @@ class Comment:
 
     def edit_message(self, new_message):
         self.message = new_message
+
+
+
+
+
+
+
+
+
+
+
 
 """
 Testing my classes
