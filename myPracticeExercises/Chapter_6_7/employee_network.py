@@ -17,12 +17,14 @@ class Employee:
         self.hire_date = hire_date
         Employee.employee_count += 1
         
+        self.total_score = 0             # initializes a total_score variable to track points
         self.posts = []                  # initializes an empty list to hold all posts
         self.comments = []               # initializes an empty list to hold all comments
 
     # Creates a new post
     def post_message(self, message):
         post = Post(self, message)
+        self.total_score += 5
         self.posts.append(post)
         return post
 
@@ -88,6 +90,12 @@ print(f'Name: {marketer1.name} Email: {marketer1.email} Hire Date: {marketer1.hi
 
 # Use the post message method to create new Post objects
 intro_message = e2.post_message("Hi all! So excited to be joining the company!")
+engineer1_message = engineer1.post_message(f"Hi, My name is {engineer1.name} I'm super excited to be here!")
+marketer1_message = marketer1.post_message(f"Hi, I'm {marketer1.name} It's a pleasure to meet you all!")
+
+print(engineer1.total_score)
+print(marketer1.total_score)
+
 
 # Use the returned post to comment on the message
 e1.comment_on_post("Welcome to the team!", intro_message)
