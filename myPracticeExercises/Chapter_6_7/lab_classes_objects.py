@@ -24,12 +24,12 @@ class Track:
 
 #*                                       Testing:
 
-# Instatiating Artist objects
+# Instantiating Artist objects
 art1 = Artist('art1')
 art2 = Artist('art2')
 
 
-# Instiating Album objects
+# Instantiating Album objects
 album_1 = Album('album_1', art1)
 album_2 = Album('album_2', art2)
 
