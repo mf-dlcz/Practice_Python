@@ -1,5 +1,0 @@
-'''
-Overriding Methods:
-    
-
-'''
