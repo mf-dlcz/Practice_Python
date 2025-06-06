@@ -1,0 +1,3 @@
+[{"scoops": ["cherry", "chocolate"], "container": "cone"}, {"scoops": ["grape"], "container": "cone"}, {"scoops": ["cherry", "peach"], "container": "cup"}, {"scoops": ["vanilla", "strawberry", "chocolate"], "container": "cup"}]
+[{"scoops": ["mint"], "container": "cone"}]
+[{"scoops": ["chocolate", "mint"], "container": "cup"}, {"scoops": ["vanilla"], "container": "cone"}]
