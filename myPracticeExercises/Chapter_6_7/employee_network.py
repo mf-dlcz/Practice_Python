@@ -19,17 +19,20 @@ class Employee:
         self.total_score = 0             # initializes a total_score variable to track points
         self.posts = []                  # initializes an empty list to hold all posts
         self.comments = []               # initializes an empty list to hold all comments
+
     def post_message(self, message):     # creates a new post
         post = Post(self, message)
         self.total_score += 5
         self.posts.append(post)
         return post
+    
     def comment_on_post(self, message, post, points = 1):           # creates a new comment in a post
         comment = Comment(self, message, post)
         self.total_score += points
         post.comments.append(comment)               # comment is added to the comments list
         self.comments.append(comment)               # appends comment to the employee object
         return comment                              # returns comment object
+    
     def like_post(self, post, points = 1):          # creates a new comment on a post.
         like = Like(self, post)                     # creates a new Like object with an employee as author & the orig post
         self.total_score += points
@@ -40,6 +43,7 @@ class Engineer(Employee):
     def __init__(self, name, email, hire_date):
         super().__init__(name, email, hire_date)
         self.department = 'Engineering'
+
     def comment_on_post(self, message, post):           # overrides the parent comment_on_post method
         if post.author.department == 'Engineering':
             points = 1
@@ -51,6 +55,7 @@ class Marketer(Employee):
     def __init__(self, name, email, hire_date):
         super().__init__(name, email, hire_date)
         self.department = 'Marketing'
+
     def comment_on_post(self, message, post):
         if post.author.department == 'Marketing':
             points = 1
@@ -62,6 +67,7 @@ class UX(Employee):
     def __init__(self, name, email, hire_date):
         super().__init__(name, email, hire_date)
         self.department = 'UX Designer'
+
     def comment_on_post(self, message, post):
         if post.author.department == 'UX Designer':
             points = 1
@@ -76,6 +82,7 @@ class Post:
         self.message = message
         self.author = author
         self.comments = []                         # initiates a list that holds comments on the post
+
     def edit_post(self, new_comment):
         self.message = new_comment
 
@@ -86,6 +93,7 @@ class Comment:
         self.author = author
         self.message = message
         self.post = post
+
     def edit_message(self, new_message):
         self.message = new_message
 
@@ -94,6 +102,7 @@ class Like:
     def __init__(self, author, post):
         self.author = author
         self.post = post
+        
     def unlike(self, post):
         self.post.likes.remove(self)
 
