@@ -16,8 +16,9 @@ class Student:
         self.color
         self.quarter
         self.hobby
-        return self.name, self.color, self.quarter, self.hobby
+        return f'Name: {self.name} \nColor: {self.color} \nQuarter: {self.quarter} \nHobby: {self.hobby}'
 
 
 student1 = Student('Maria', 'grey', 1, 'hiking')
 print(student1.print_hobby())
+print(student1.print_all_details())
