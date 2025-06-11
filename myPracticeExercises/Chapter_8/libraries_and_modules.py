@@ -43,3 +43,56 @@ your scripts.
 
 
 #           Reviewing a sample module:
+
+# Imported this way, you must reference the module by name when you use its variables, classes, or 
+# functions. 
+'''
+                SYNTAX:
+
+import file_name
+
+#* calling method in file:
+variable = file_name.method_name(1, 2, 5)
+'''
+
+##########################################################################
+
+#           Import definitions & Statements:
+
+# When you name a particular definition or statement to import from a module, it brings that name into 
+# the namespace of the importing script. Then, you can reference the name directly, without also naming 
+# the module it came from
+'''
+from file_name import method_name
+
+variable = method_name(1, 2, 5)
+'''
+
+##########################################################################
+
+#           Importing all definitions & Statements:
+# imports all definitions & statements from a module.
+'''
+from file_name import *
+'''
+
+###########################################################################
+
+#           Import and assign alias:
+# You can also assign an alias to an object or an entire module during import. This can be especially 
+# helpful if you need to overcome a naming conflict in your scripting program. Or, if you have a function 
+# or module with a long name, you can save yourself some typing using an abbreviation
+
+'''
+import file_name as f_name
+
+total = f_name.method_name(1, 2, 5)
+f_name.method_name()
+'''
+
+#           Provide an alias for a function
+'''
+from file_name import function_name as func_name
+
+total = method_name(1, 2, 5)
+'''
