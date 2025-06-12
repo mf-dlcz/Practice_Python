@@ -77,13 +77,53 @@ today = datetime.date.today()
 # import datetime
 
 my_birth_date = datetime.datetime(1920, 11, 17)
-print (my_birth_date)
+# print (my_birth_date)
 
 current_date = datetime.datetime.now()
 
 delta = current_date - my_birth_date
 
-print (delta)
+# print (delta)
 
 #######################################################################
 
+#       Finding a date in the past or future:
+
+# import datetime
+
+start_date = datetime.date(2000, 7, 5) # known date
+end_date = start_date + datetime.timedelta(weeks=441) #unknown date
+
+# print(start_date)
+# print (end_date)
+
+#######################################################################
+
+#       Converting a string value to a date object:
+
+'''
+from datetime import date
+
+new_date_obj = date.fromisoformat('2023-07-15')
+print(new_date_obj)
+'''
+
+'''
+- strptrime() does the same thing as the code above
+- strptime()  -> takes two arguments: a date or time string
+
+-   %d  -> day of the month
+-   %m  -> month (1-12)
+-   %Y  -> year including the century
+'''
+
+#       EXAMPLE:
+'''
+from datetime import datetime
+
+date_string = "1/1/2000"
+date_format = "%m/%d/%Y"
+
+new_date = datetime.strptime(date_string, date_format)
+print (new_date)
+'''
