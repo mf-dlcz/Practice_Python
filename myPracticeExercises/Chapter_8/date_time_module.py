@@ -156,3 +156,40 @@ print (new_date)
 #####################################################################
 
 #       The strftime() method:
+
+#   #############################       EXAMPLE:
+'''
+# from datetime import datetime
+
+# new_date = datetime(2020, 7, 31)
+# print (new_date.strftime("%B"))
+# '''
+
+# from datetime import datetime
+
+# new_date = datetime(2015, 3, 30, 10, 30)
+# print(new_date.strftime('%A'))
+
+########################################################################
+
+#       CHALLENGE: NEXT FRIDAY
+
+'''
+Write a function that takes a date as input and returns the number of days until the 
+next Friday.
+'''
+import datetime
+
+def date_converter(date):
+    return date
+
+
+date_converter()
+
+
+
+# start_date = datetime.date(2000, 7, 5) # known date
+# end_date = start_date + datetime.timedelta(weeks=441) #unknown date
+
+# print(start_date)
+# print (end_date)
