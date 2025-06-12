@@ -25,7 +25,7 @@ tzinfo:     An abstract base class for time zone information objects. These are 
 timezone:   A class that implements the tzinfo abstract base class as a fixed offset from the UTC. Objects are immutable.
 '''
 
-import datetime
+# import datetime
 
 # timestamp_date = datetime.date.fromtimestamp(1682350249)
 
@@ -37,7 +37,7 @@ import datetime
 
 # import datetime
 
-today = datetime.date.today()
+# today = datetime.date.today()
 
 # print (today)
 # print(today.year)
@@ -76,12 +76,12 @@ today = datetime.date.today()
 
 # import datetime
 
-my_birth_date = datetime.datetime(1920, 11, 17)
+# my_birth_date = datetime.datetime(1920, 11, 17)
 # print (my_birth_date)
 
-current_date = datetime.datetime.now()
+# current_date = datetime.datetime.now()
 
-delta = current_date - my_birth_date
+# delta = current_date - my_birth_date
 
 # print (delta)
 
@@ -91,8 +91,8 @@ delta = current_date - my_birth_date
 
 # import datetime
 
-start_date = datetime.date(2000, 7, 5) # known date
-end_date = start_date + datetime.timedelta(weeks=441) #unknown date
+# start_date = datetime.date(2000, 7, 5) # known date
+# end_date = start_date + datetime.timedelta(weeks=441) #unknown date
 
 # print(start_date)
 # print (end_date)
@@ -117,7 +117,7 @@ print(new_date_obj)
 -   %Y  -> year including the century
 '''
 
-#       EXAMPLE:
+###########################      EXAMPLE #1:
 '''
 from datetime import datetime
 
@@ -127,3 +127,32 @@ date_format = "%m/%d/%Y"
 new_date = datetime.strptime(date_string, date_format)
 print (new_date)
 '''
+
+# from datetime import datetime
+
+# date_in_str = '2005-5-15'
+# date_format = '%Y-%m-%d'
+
+# formatted_date = datetime.strptime(date_in_str, date_format)
+
+# print(formatted_date)
+
+
+##########################       EXAMPLE #2:
+
+# from datetime import datetime
+
+# date_string = "12 May, 2222"
+# date_format = "%d %B, %Y"
+# new_date = datetime.strptime(date_string, date_format)
+# print (f"{date_string} converts to", new_date)
+
+
+# date_string = "Mar 10 2020 08:27"
+# date_format = "%b %d %Y %H:%M"
+# new_date = datetime.strptime(date_string, date_format)
+# print (f"{date_string} converts to", new_date)
+
+#####################################################################
+
+#       The strftime() method:
