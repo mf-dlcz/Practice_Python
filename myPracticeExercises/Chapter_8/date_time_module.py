@@ -43,8 +43,8 @@ today = datetime.date.today()
 # print(today.year)
 # print(today.month)
 # print(today.day)
-# print(today.weekday())    # weekday returns the day of week as a number
-                            # Monday  is 0, Tuesday is 1, and so on.
+# print(today.weekday())        # weekday returns the day of week as a number
+                                # Monday  is 0, Tuesday is 1, and so on.
 
 #######################################################################
 
@@ -66,9 +66,24 @@ today = datetime.date.today()
 
 # import datetime
 
-past_date = datetime.datetime(2015, 3, 14, 9, 26)
-print(past_date)
+# past_date = datetime.datetime(2015, 3, 14, 9, 26)
+# print(past_date)
 
 ########################################################################
 
 #           Finding Deltas:
+# Finds the duration between two dates by applying the subtraction math operator.
+
+# import datetime
+
+my_birth_date = datetime.datetime(1920, 11, 17)
+print (my_birth_date)
+
+current_date = datetime.datetime.now()
+
+delta = current_date - my_birth_date
+
+print (delta)
+
+#######################################################################
+
