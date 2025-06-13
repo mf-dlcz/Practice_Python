@@ -178,18 +178,20 @@ print (new_date)
 Write a function that takes a date as input and returns the number of days until the 
 next Friday.
 '''
-import datetime
+from datetime import datetime
 
 def date_converter(date):
-    return date
+	date_format = '%m-%d-%Y'
 
+	formatted_date = datetime.strptime(date, date_format)
+	# returns the week_day as an int
+	# Monday = 0
+	week_day = formatted_date.weekday()
+	if week_day <= 4:
+		num_days = 4 - week_day
+	else:
+		num_days = 11 - week_day
+	return num_days
 
-date_converter()
-
-
-
-# start_date = datetime.date(2000, 7, 5) # known date
-# end_date = start_date + datetime.timedelta(weeks=441) #unknown date
-
-# print(start_date)
-# print (end_date)
+next_Friday = date_converter('08-02-2023')
+print(next_Friday)
