@@ -39,6 +39,20 @@ class Sales:
         report += f'Total Sales: ${total_value}\n'
         return report
 
+    def __iter__(self):
+        self.index = 0
+        return self
+
+    def __next__(self):
+        if self.index >= len(self.sales_data):
+            raise StopIteration
+        name = self.sales_data[self.index]['product'].name
+        quantity = self.sales_data[self.index]['quantity']
+        sale = f'You sold {quantity} of {name}.'
+        self.index += 1
+        return sale
+
+
 #           TEST
 def test_classes():
     prod1 = Product("WidgetA", 10.99, 100)
@@ -55,4 +69,13 @@ def test_classes():
     
     print (sales.generate_report())
 
-test_classes()
+    sales_iter = iter(sales)
+    print (next(sales_iter))
+    print (next(sales_iter))
+    print (next(sales_iter))
+    print (next(sales_iter))
+    print (next(sales_iter), '\n')
+
+
+if __name__ == '__main__':
+    test_classes()
