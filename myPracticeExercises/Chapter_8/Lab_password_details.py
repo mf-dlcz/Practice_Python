@@ -56,15 +56,14 @@ def contains_special_char(str):
             return True
     return False
 
-
-
+if __name__ == '__main__':
 #           TESTS:
-pw1 = 'passworddddd'
-pw2 = 'PasswordDDDD'
-pw3 = 'Password1234'
-pw4 = 'Password1_2^3'
+    pw1 = 'passworddddd'
+    pw2 = 'PasswordDDDD'
+    pw3 = 'Password1234'
+    pw4 = 'Password1_2^3'
 
-print(pw1, 'Points: ', get_strength(pw1))
-print(pw2, 'Points: ', get_strength(pw2))
-print(pw3, 'Points: ', get_strength(pw3))
-print(pw4, 'Points: ', get_strength(pw4))
+    print(pw1, 'Points: ', get_strength(pw1))
+    print(pw2, 'Points: ', get_strength(pw2))
+    print(pw3, 'Points: ', get_strength(pw3))
+    print(pw4, 'Points: ', get_strength(pw4))

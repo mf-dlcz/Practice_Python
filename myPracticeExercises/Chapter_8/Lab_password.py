@@ -1,14 +1,16 @@
 # Checking Passwords:
+import Lab_password_details
 
 def password_score(password):
-    if password == 'password':
-        return 5
-    return 0
+    return Lab_password_details.get_strength(password)
 
-pw = input('Enter password: ')
+pw = input('\nEnter password: ')
+
 while password_score(pw) < 3:
-    print('Weak password. Password score = ', password_score(pw))
+    print('\nWeak password. Password score = ', password_score(pw))
+    pw = input('Enter a better password: ')
+
 if password_score(pw) > 4:
-    print('Strong password! Score: ', password_score(pw))
+    print('\nStrong password! Score: ', password_score(pw))
 else:
-    print('Acceptable password. Score: ', password_score(pw))
+    print('\nAcceptable password. Score: ', password_score(pw))
