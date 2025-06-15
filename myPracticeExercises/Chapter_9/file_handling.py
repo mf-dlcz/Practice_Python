@@ -32,3 +32,17 @@
 '''
 
 ########################################################################           CREATING & WRITING FILES:
+
+# Create a file and write a welcome message to it.
+# f = open('welcome.txt', 'w')
+# f.write('Hello! This is my first time writing on a file. Yay!')
+
+# Open the file and print its contents.
+# f = open('welcome.txt', 'r')
+# print(f.read())
+
+# Closes the file
+# f.close()
+
+#####################################################################
+#*          CHALLENGE: Add data to an existing file:
