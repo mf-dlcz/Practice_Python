@@ -33,16 +33,72 @@
 
 ########################################################################           CREATING & WRITING FILES:
 
+'''
 # Create a file and write a welcome message to it.
-# f = open('welcome.txt', 'w')
-# f.write('Hello! This is my first time writing on a file. Yay!')
+f = open('welcome.txt', 'w')
+f.write('Hello! This is my first time writing on a file. Yay!')
 
-# Open the file and print its contents.
-# f = open('welcome.txt', 'r')
-# print(f.read())
+# Open the file and reads its contents.
+f = open('welcome.txt', 'r')
+print(f.read())
 
 # Closes the file
-# f.close()
+f.close()
+'''
 
 #####################################################################
 #*          CHALLENGE: Add data to an existing file:
+
+'''
+Use the append mode to modify the welcome.txt file you just created. Add the text "Adding: Thank you." 
+to it. Next, print the file contents to confirm the appended text is available.
+'''
+
+'''
+# Opening the txt file and adding to it
+f = open('welcome.txt', 'a')
+# Add a line of text to the existing file
+f.write('\nAdding: Thank you')
+# Closing the file
+f.close()
+
+
+# Opening the file and reading from the file
+f = open('welcome.txt', 'r')
+print(f.read())
+'''
+
+##############################################################                  OPENING & READING FILES:
+'''
+-   If file lives in a different file path that must be included and passed to
+    the open() function.
+
+            EXAMPLE:
+    f = open('D:\\appfiles\welcome.txt', 'r')
+
+-   The read() method reads the entire content of the file you if don't specify
+    with a size argument (reads a specific number of bytes from the file).
+
+            EXAMPLE:
+    # For most text files, 5 bytes is equivalent to the first five chars.
+    print(f.read(5))
+'''
+
+###########################################################                     DELETING FILES:
+
+'''
+-   To delete a file the OS module must be imported. 
+
+            EXAMPLE:
+    import os
+    os.remove('welcome.txt')
+
+-   To check if the file exists before deleting use the os.path.exists() method.
+
+            EXAMPLE:
+    import os
+    if os.path.exists('welcome.txt')
+        os.remove('welcome.txt')
+    else:
+        print('The file doesn't exist')
+'''
