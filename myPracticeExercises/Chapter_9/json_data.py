@@ -35,6 +35,7 @@ json.loads()    decodes a JSON-formatted string into a Python object.
 
 ##########################################################                  CONVERTING FROM JSON TO PYTHON:
 
+'''
 # import the JSON module
 import json
 
@@ -45,4 +46,33 @@ x = '{"name": "John", "lastname": "Stiles", "city": "Vancouver"}'
 y = json.loads(x)
 
 # print the value of 'city'
-print(y['city'])
+print(type(y['city']))              # When I add the type I received a str
+print(type(y))                      # Python Object as a dictionary
+print(type(x))                      # receive a str
+'''
+
+#########################################################                  USING json.load()
+
+'''
+{
+    "movie": "starwars",
+    "genre": "science fiction"
+}
+
+import json
+
+# Open the JSON file
+f = open('/Users/mariadelacruz/Documents/AWS Coding Exercises/src/myPracticeExercises/Chapter_9/mydata.json', 'r')
+
+# Convert the JSON data into Python.
+mydata = json.load(f)
+
+# Close file
+f.close()
+
+# mydata contains a Python object representing the JSON file data
+print(mydata)
+
+# type = 'dictionary'
+print(type(mydata))
+'''
