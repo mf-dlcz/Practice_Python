@@ -78,4 +78,27 @@ print(mydata)
 print(type(mydata))
 '''
 
-########################################################
+########################################################                CONVERTING FROM PYTHON TO JSON
+
+'''
+The following types can be converted into JSON
+
+. dict          . list           . tuple            . string
+. int           . float          . True             . False
+. None
+'''
+
+import json
+
+# Define a dictionary with three key-value pairs.
+x = {
+    "dog": "Jack",
+    "breed": "Golden Retriever",
+    "city": "Albuquerque"
+}
+
+# Convert dictionary into a JSON string using json.dumps().
+y = json.dumps(x)
+
+# Print output.         #* type = str
+print(y)
