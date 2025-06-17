@@ -13,9 +13,12 @@ book_info = {
 # 2. Convert to JSON: Use the 'json' module to convert your 'book_info'
 #    dictionary into a JSON string. Store this string in a variable called 'json_book'.
 json_book = "" # This will hold your JSON string
-json_book = json.dumps(book_info)
+json_book = json.dumps(book_info, indent = 4)
+
+# the code bellow adds a separator to improve the output of the result
+# json_book = json.dumps(book_info, indent = 4, separators = (".", " = "))
 
 # 3. Print the result: Display the 'json_book' string.
 # print(json_book) # Uncomment this line when you're ready to print
 
-print(type(json_book))
+print(json_book)
