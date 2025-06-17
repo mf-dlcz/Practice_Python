@@ -54,6 +54,7 @@ print(type(x))                      # receive a str
 #########################################################                  USING json.load()
 
 '''
+#* THIS DATA WAS MOVED TO mydata.json
 {
     "movie": "starwars",
     "genre": "science fiction"
@@ -62,7 +63,7 @@ print(type(x))                      # receive a str
 import json
 
 # Open the JSON file
-f = open('/Users/mariadelacruz/Documents/AWS Coding Exercises/src/myPracticeExercises/Chapter_9/mydata.json', 'r')
+f = open('mydata.json, 'r')
 
 # Convert the JSON data into Python.
 mydata = json.load(f)
@@ -76,3 +77,5 @@ print(mydata)
 # type = 'dictionary'
 print(type(mydata))
 '''
+
+########################################################
