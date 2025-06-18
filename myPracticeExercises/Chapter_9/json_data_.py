@@ -88,6 +88,7 @@ The following types can be converted into JSON
 . None
 '''
 
+'''
 import json
 
 # Define a dictionary with three key-value pairs.
@@ -102,4 +103,49 @@ y = json.dumps(x)
 
 # Print output.         #* type = str
 print(y)
+'''
 
+#####################################################                    Attribute Dictionary(namespace dictionary)
+
+'''
+                    __dict__
+.   is the attribute or namespace dictionary of an object. 
+.   It is a special dictionary that contains all the writable attributes of an object, including
+    methods and properties.
+.   The keys in the dictionary are the attribute names(as strings), and the values are the
+    corresponding attribute values.
+.   Contains all the attributes defined for that particular instance.
+'''
+
+
+'''
+Serialization:  is the process of converting an object into a format that can be easily stored or 
+                transmitted, such as a JSON string. This allows the object's data to be saved to a 
+                file, sent over a network, or used in other applications. Deserialization is the 
+                reverse process, where the stored or transmitted data is converted back into an object. 
+
+Direct Serialization:   json.dumps() can directly serialize dictionaries, lists, and other basic 
+                        data types, but NOT custom objects.
+
+Custom Serialization:   To serialize custom objects, you can either convert the object to a dictionary 
+                        manually or implement a custom serializer method.
+
+Deserialization:    is the reverse process, where the stored or transmitted data is converted back into an object.
+'''
+
+###################################################                     LOOPING OVER DICTIONARIES & JSON
+
+'''
+# import the JSON module
+import json
+
+# define JSON string
+x = '{"name": "John", "lasname": "Stiles", "city": "NY"}'
+
+# parse JSON data into Python dictionary
+json_to_python = json.loads(x)
+
+# loop through the Python dictionary
+for key, value in json_to_python.items():
+    print(key, ':', value)
+'''
