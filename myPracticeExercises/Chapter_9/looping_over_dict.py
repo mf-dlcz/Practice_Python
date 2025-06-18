@@ -9,5 +9,5 @@ for key, value in about_me.items():
     print(f"{key}: {value}")
 
 # Loop through hobbies list and print each one
-for hobby in about_me['hobby']:
+for hobby in about_me['hobbies']:
     print(hobby)
