@@ -90,7 +90,7 @@ print(f.read())
 -   To delete a file the OS module must be imported. 
 
             EXAMPLE:
-    import os
+#*  import os
     os.remove('welcome.txt')
 
 -   To check if the file exists before deleting use the os.path.exists() method.
@@ -102,3 +102,7 @@ print(f.read())
     else:
         print('The file doesn't exist')
 '''
+
+############################################################                    with open()
+
+# with open() automatically closes the file
