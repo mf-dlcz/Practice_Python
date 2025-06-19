@@ -3,7 +3,7 @@
 
 import logging
 logging.basicConfig(level=logging.DEBUG) # Choose a level!
- 
+
 # Log these events:
 # - Your pet waking up (debug)
 logging.debug('Spot is not feeling well')

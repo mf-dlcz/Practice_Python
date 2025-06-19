@@ -140,7 +140,7 @@ Deserialization:    is the reverse process, where the stored or transmitted data
 import json
 
 # define JSON string
-x = '{"name": "John", "lasname": "Stiles", "city": "NY"}'
+x = '{"name": "John", "lastname": "Stiles", "city": "NY"}'
 
 # parse JSON data into Python dictionary
 json_to_python = json.loads(x)
@@ -149,3 +149,6 @@ json_to_python = json.loads(x)
 for key, value in json_to_python.items():
     print(key, ':', value)
 '''
+
+################################################                        USING INPUT VALIDATION:
+
