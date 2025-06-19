@@ -87,7 +87,8 @@ print(f.read())
 ###########################################################                     DELETING FILES:
 
 '''
--   To delete a file the OS module must be imported. 
+-   To delete a file the OS module must be imported.
+# * REMOVES the file permanently - cannot be recovered!!
 
             EXAMPLE:
 #*  import os
@@ -105,4 +106,20 @@ print(f.read())
 
 ############################################################                    with open()
 
-# with open() automatically closes the file
+# with open()
+# The with statement automatically closes the file without explictly using the .close(method)
+
+'''
+- Using the .close() method
+
+file = open('data.txt', 'r')
+print(f.read())
+f.close()
+
+- Here is the same code using with open()
+
+#
+with open('data.txt', 'r) as file_read:
+    print(file_read.read())
+'''
+
