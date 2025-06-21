@@ -107,7 +107,7 @@ print(f.read())
 ############################################################                    with open()
 
 # with open()
-# The with statement automatically closes the file without explictly using the .close(method)
+# The with statement automatically closes the file without explicitly using the .close(method)
 
 '''
 - Using the .close() method
