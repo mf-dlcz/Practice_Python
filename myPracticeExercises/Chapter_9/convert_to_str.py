@@ -65,3 +65,19 @@ product_data = {
         }
     ]
 }
+
+# Convert python dictionary into a json string
+product_data_str = json.dumps(product_data)
+
+# <class str>
+# print(type(product_data_str))
+
+# opens and writes the converted JSON string into the product_data.json file
+with open("product_data.json", "w") as json_file:
+    json_file.write(product_data_str)
+
+# read the string in the terminal
+with open("product_data.json", "r") as input:
+    product_info = json.load(input)
+
+print(product_info)
