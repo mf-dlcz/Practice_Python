@@ -126,5 +126,11 @@ with open('data.txt', 'r) as file_read:
 ######################################################                      Using input validation
 
 '''
+JSON schema:    is used to validate input.
+                is a document that allows you to validate JSON documents.
+                used to define the expected structure, data types and validation rules
+                for JSON data.
 
+INSTALLING:
+                pip install jsonschema
 '''
