@@ -118,7 +118,7 @@ f.close()
 
 - Here is the same code using with open()
 
-#
+#        (file_name, mode)   file handle
 with open('data.txt', 'r) as file_read:
     print(file_read.read())
 '''

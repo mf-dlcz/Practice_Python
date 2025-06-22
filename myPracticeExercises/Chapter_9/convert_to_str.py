@@ -66,6 +66,7 @@ product_data = {
     ]
 }
 
+'''
 # Convert python dictionary into a json string
 product_data_str = json.dumps(product_data)
 
@@ -81,3 +82,27 @@ with open("product_data.json", "r") as input:
     product_info = json.load(input)
 
 print(product_info)
+'''
+
+##############################################################
+#                   EXERCISE:
+
+'''
+food = ['apricots', 'peach', 'mango', 'kiwi', 'blueberries']
+
+# Convert list into a json str
+str_food = json.dumps(food)
+
+# <class str>
+# print(type(str_food))
+
+# Read str in terminal without creating a separate file
+json_to_a_list = json.loads(str_food)
+print(json_to_a_list)
+
+'''
+
+############################################################
+
+#                   EXERCISE:
+
