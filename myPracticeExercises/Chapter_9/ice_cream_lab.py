@@ -115,5 +115,3 @@ for item in items:
         print(f"\t{e+1}. {scoop}")
 
 print("Thank you for your patronage!\n")
-
-###############################################################
