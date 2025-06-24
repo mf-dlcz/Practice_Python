@@ -63,7 +63,7 @@ order_complete = False
 while not order_complete:
     # Store empty dict to hold current order item
     item = {}
-    # Initilize scoops as a key that holds an empty list
+    # Initialize scoops as a key that holds an empty list
     item["scoops"] = []
 
     # Container choice
