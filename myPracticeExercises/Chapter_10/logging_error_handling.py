@@ -53,3 +53,6 @@ https://docs.python.org/3/howto/logging.html#when-to-use-logging
 
 '''
 
+#* The default level is WARNING, which means that only events of this level and higher will be tracked, 
+#* unless the logging package is configured to do otherwise.
+
