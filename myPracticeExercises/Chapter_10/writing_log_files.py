@@ -26,7 +26,7 @@ logging.critical("This is a critical message")
 '''
 ###############################################################################################
 
-#                   Formating Messages:
+#                   formatting Messages:
 '''
 -   Adds dates and times
 
