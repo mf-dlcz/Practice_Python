@@ -10,11 +10,11 @@ and a message. All logs at level INFO and higher should be logged.
 
 logging.basicConfig(filename = "/Users/mariadelacruz/Documents/AWS Coding Exercises/src/myPracticeExercises/Chapter_10/ex_ample.log",
                         format = "%(asctime)s %(levelname)s %(message)s",
-                        level = logging.DEBUG)
+                        level = logging.INFO)
 
 def process_data():
     user_input = []
-    user_input = input("Enter a list of numbers separated by commas: \n")
+    user_input = input("Enter a series of numbers, each separated by comma: \n")
     return user_input
 
 print(process_data())
