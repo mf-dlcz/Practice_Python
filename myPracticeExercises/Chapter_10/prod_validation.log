@@ -1,0 +1,4 @@
+2025-06-28 16:14:10,899 WARNING Product missing required field: price
+2025-06-28 16:14:10,899 INFO Added product to inventory: Product2
+2025-06-28 16:14:10,899 WARNING Product missing required field: name
+2025-06-28 16:14:10,899 INFO Added product to inventory: Product4

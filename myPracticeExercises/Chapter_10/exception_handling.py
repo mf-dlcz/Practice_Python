@@ -114,7 +114,7 @@ finally:
 # occur. The keyword raise is used to raise an exception.
 
 '''
-#?    The following code raises an excpetion if the user 
+#?    The following code raises an exception if the user 
 #?    enters a number less than 13
 
 
