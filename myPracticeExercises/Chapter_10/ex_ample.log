@@ -1,0 +1,9 @@
+2025-06-28 02:02:49,509 INFO Inside my fuction
+2025-06-28 02:03:03,135 INFO User input is 4 items long
+2025-06-28 02:03:03,136 INFO Function returns [10, 20, 30, 40]
+2025-06-28 02:03:10,542 INFO Inside my fuction
+2025-06-28 02:03:24,036 INFO Inside my fuction
+2025-06-28 02:03:28,656 ERROR User did not enter values separated by a comma
+2025-06-28 02:03:28,657 INFO Function will return, please try again.
+2025-06-28 02:03:39,342 INFO Inside my fuction
+2025-06-28 02:04:05,792 INFO Inside my fuction
