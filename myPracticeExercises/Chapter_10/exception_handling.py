@@ -59,3 +59,33 @@ def divide_numbers():
             print (e)
 
 print(divide_numbers())
+
+#               SAME CODE AS ABOVE WITH THE ELSE BLOCK:
+
+#* an else block can also be included after the last exception handler
+#* 
+
+'''
+def divide_numbers():
+    try:
+        dividend = int(input("Enter the integer to divide: "))
+        divisor = int(input("Enter the integer to divide by: "))
+        result = dividend/divisor
+    except ValueError: 
+        print ("Enter an integer.")
+    except ZeroDivisionError:
+        print ("Cannot divide by zero.")
+    else: 
+        return (result)
+
+divide_numbers()
+'''
+
+##################################################
+
+#               EXAMPLE:
+'''
+                THE FINAL BLOCK:
+It can be specified to run the last code block whether
+or not an exception has been raised.
+'''
