@@ -51,7 +51,7 @@ import logging
 
 logging.basicConfig(filename="example1.log", 
                     format="%(asctime)s %(levelname)s %(message)s", 
-                    level=logging.DEBUG)
+                    level=logging.INFO)
 
 logging.debug("This is a debug message")
 logging.info("This is an info message")

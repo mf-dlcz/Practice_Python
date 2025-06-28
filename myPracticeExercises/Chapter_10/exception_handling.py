@@ -85,7 +85,66 @@ divide_numbers()
 
 #               EXAMPLE:
 '''
-                THE FINAL BLOCK:
+                THE FINALLY BLOCK:
 It can be specified to run the last code block whether
 or not an exception has been raised.
+'''
+
+'''
+try:
+    file = open("myfile.txt", "r")
+    # Perform some operations on the file
+except FileNotFoundError:
+    print("The file could not be found.")
+except IOError:
+    print("An error occurred while reading the file.")
+else:
+    print("File contents:", file.read())
+finally:
+    if 'file' in locals():
+        file.close()
+        print("File closed.")
+'''
+
+################################################
+
+#               EXAMPLE:
+
+# It's possible to raise exceptions if certain conditions
+# occur. The keyword raise is used to raise an exception.
+
+'''
+#?    The following code raises an excpetion if the user 
+#?    enters a number less than 13
+
+
+def create_profile(username, age):
+    """Creates dictionary with user details
+    and calls function to create homepage """
+    try: 
+        if age < 13:
+            raise Exception("Account holders must be 13 or older.")
+        user_dict = {"name": username, "age": age}
+        print (user_dict)
+        create_homepage(user_dict)
+    except Exception as e:
+        print (e)
+
+
+
+?  The example below is similar to the example above. The difference is that ValueError 
+?  specifies that an inappropriate value was entered.
+
+def create_profile(username, age):
+    """Creates dictionary with user details
+    and calls function to create homepage """
+    try: 
+        if age < 13:
+            raise ValueError("Account holders must be 13 or older.")
+        user_dict = {"name": username, "age": age}
+        print (user_dict)
+        create_homepage(user_dict)
+    except Exception as e:
+        print(type(e))
+        print (e)
 '''
