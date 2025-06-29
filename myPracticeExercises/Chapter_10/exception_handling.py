@@ -148,3 +148,15 @@ def create_profile(username, age):
         print(type(e))
         print (e)
 '''
+
+################################################
+
+#?               Adding the date & the time to my file
+
+'''
+from datetime import datetime
+
+logging.basicConfig(
+                    filename = f'name_of_file-{datetime.now().strftime("%Y%m%d")}.log', 
+                    filemode = 'w')
+'''
