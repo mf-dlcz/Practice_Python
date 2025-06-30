@@ -6,7 +6,7 @@ def is_even(number):
     """
     return number % 2 == 0
 
-def get_full_name(first_name, last_name):
+def get_full_name(first_name: str, last_name: str):
     """
     Combines first and last names into a full name.
     """
@@ -28,13 +28,14 @@ class Test_functions(unittest.TestCase):
 
     def test_get_full_name(self):
         result = get_full_name('Maria', 'Black')
-        self.assertEqual(result.split(), ['Maria', 'Black'])
-        # with self.assertRaises(ValueError):
+        self.assertEqual(result, 'Maria Black')
 
     def test_calculate_area_rectangle(self):
         result = calculate_area_rectangle(2, 2)
         self.assertEqual(result, 4)
         self.assertNotEqual(result, 5)
+
+# print(get_full_name(Maria, Doe))
 
 if __name__ == '__main__':
     unittest.main()
