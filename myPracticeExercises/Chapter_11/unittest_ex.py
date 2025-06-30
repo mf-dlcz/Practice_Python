@@ -1,3 +1,5 @@
+# Practice exercises:
+
 import unittest
 
 def is_even(number):
@@ -17,6 +19,54 @@ def calculate_area_rectangle(length, width):
     Calculates the area of a rectangle.
     """
     return length * width
+
+class SimpleCounter:
+    """
+    A simple counter class to demonstrate basic object-oriented programming
+    and provide a target for unit testing.
+    """
+    def __init__(self, initial_count=0):
+        """
+        Initializes the counter with a given starting value.
+        If no initial value is provided, it defaults to 0.
+        """
+        if not isinstance(initial_count, int) or initial_count < 0:
+            raise ValueError("Initial count must be a non-negative integer.")
+        self._count = initial_count # Using a protected attribute for the count
+
+    def increment(self):
+        """
+        Increments the counter by 1.
+        """
+        self._count += 1
+
+    def decrement(self):
+        """
+        Decrements the counter by 1.
+        The counter cannot go below 0.
+        """
+        if self._count > 0:
+            self._count -= 1
+        else:
+            # Optionally, you could raise an error here or just do nothing
+            # For this beginner example, doing nothing is simpler.
+            pass
+
+    def reset(self):
+        """
+        Resets the counter to 0.
+        """
+        self._count = 0
+
+    def get_count(self):
+        """
+        Returns the current value of the counter.
+        """
+        return self._count
+
+
+################################################################################
+
 
 # Tests the functions above
 class Test_functions(unittest.TestCase):
