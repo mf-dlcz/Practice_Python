@@ -71,6 +71,15 @@ class SimpleCounter:
 # Tests the functions above
 class Test_functions(unittest.TestCase):
 
+    # Tests my class
+    def setUp(self):
+        self.counter = SimpleCounter()
+        self.counter._count = 1138
+
+    def test_SimpleCounter_increment(self):
+        print(self.counter.get_count())
+
+    # Tests my functions
     def test_is_even(self):
         result = is_even(4)
         self.assertEqual(result, True)
