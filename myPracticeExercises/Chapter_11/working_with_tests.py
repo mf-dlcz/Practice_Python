@@ -103,6 +103,17 @@ assertFalse(x)                      Verify that x is False
 
 #################################################
 
-#           
+#*           setUp() & tearDown()
 
-    
+'''
+- When you want to save the test data in a file include the the code to open my
+file in the setUp()
+
+- Close the file inside the tearDown() function
+
+
+
+--------------------------------------------
+*** tearDown on my classes resset the values
+
+'''

@@ -64,22 +64,41 @@ class SimpleCounter:
         """
         return self._count
 
+#*                                                          Tests the functions above
 
-################################################################################
-
-
-# Tests the functions above
 class Test_functions(unittest.TestCase):
 
-    # Tests my class
+    #* Tests my class
+    # Happens before every test is run 
     def setUp(self):
         self.counter = SimpleCounter()
         self.counter._count = 1138
 
-    def test_SimpleCounter_increment(self):
-        print(self.counter.get_count())
+    # Happens after every test is finished
+    def tearDown(self):
+        pass
 
-    # Tests my functions
+    def test_SimpleCounter_increment(self):
+        '''
+        print("increment")
+        print(self.counter.get_count())
+        self.counter._count = 42
+        print(self.counter.get_count())
+        '''
+        # using a loop to add 12 to 1138
+        for number in range(12):
+            self.counter.increment()
+        self.assertEqual(self.counter.get_count(), 1150)
+
+    def test_SimpleCounter_decrement(self):
+        '''
+        print('subtract')
+        print(self.counter.get_count())
+        '''
+        self.counter.decrement()
+        self.assertEqual(self.counter.get_count(), 1137)
+
+    #* Tests my functions
     def test_is_even(self):
         result = is_even(4)
         self.assertEqual(result, True)
@@ -93,8 +112,6 @@ class Test_functions(unittest.TestCase):
         result = calculate_area_rectangle(2, 2)
         self.assertEqual(result, 4)
         self.assertNotEqual(result, 5)
-
-# print(get_full_name(Maria, Doe))
 
 if __name__ == '__main__':
     unittest.main()
