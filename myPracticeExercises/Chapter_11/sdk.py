@@ -1,6 +1,7 @@
 #                       SDK - Software Development Kit
 
 '''
+                NOTES:
 There are two primary ways to interact with AWS services:
 The client (low level) API
 The resource (high level) API
@@ -9,6 +10,4 @@ The resource (high level) API
 HTTP API operations.
 
 - The client API provides direct access to the AWS service APIs.
-
-
 '''
