@@ -114,6 +114,6 @@ file in the setUp()
 
 
 --------------------------------------------
-*** tearDown on my classes resset the values
+*** tearDown on my classes reset the values
 
 '''
