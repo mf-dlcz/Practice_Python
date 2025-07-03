@@ -65,3 +65,17 @@ good approach). This demonstrates association.
 For unit tests, think about the "happy path" (things working as expected) and "edge cases" (e.g., empty lists, 
 invalid input).
 '''
+
+class Post:
+
+    def __init__(self, title, content, author):
+        self.title = title
+        self.content = content
+        self.author = author
+
+        def display_post():
+            return f'''
+                Title: {title},
+                Content: {content},
+                Author: {author}
+            '''
