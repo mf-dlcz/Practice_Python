@@ -114,6 +114,11 @@ file in the setUp()
 
 
 --------------------------------------------
-*** tearDown on my classes reset the values
+*** the tearDown() method within the TestCase class is automatically executed 
+after each individual test method within that class has completed, regardless of
+whether the test method passed or failed.
 
+- performs cleanup operations after a test has run. This ensures that each test
+starts with a clean and consistent environment, preventing side effects from one test
+affecting subsequent tests.
 '''
