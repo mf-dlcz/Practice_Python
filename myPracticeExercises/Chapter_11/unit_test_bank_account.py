@@ -36,12 +36,11 @@ class SavingsAccount(Account):
         super().__init__(account_number, balance)
         self.interest_rate = interest_rate
     
-    
     def apply_interest(self):
         self.balance += (self.balance * self.interest_rate) / 12
         
     def summary(self):
-        return f"{super().summary()} Interest rate: {self.interest_rate}"
+        return f"{super().summary()} Interest Rate: {self.interest_rate}"
 
 
 ####             UNIT TEST               ####
@@ -81,6 +80,35 @@ class TestAccountClass(unittest.TestCase):
         account = Account(123456, 250)
         expected = 'Account Number: 123456 Balance: $250.00'
         self.assertEqual(account.summary(), expected)
+
+class TestSavingsAccountClass(unittest.TestCase):
+
+    def setUp(self):
+        # account_number, balance, interest_rate
+        self.ACCOUNT_NUMBER = 2048
+        self.INITIAL_DEPOSIT = 2500
+        self.INTEREST_RATE = 0.024
+        self.account = SavingsAccount(self.ACCOUNT_NUMBER, self.INITIAL_DEPOSIT, self.INTEREST_RATE)
+
+    def test_constructor(self):
+        self.assertEqual(self.account.account_number, str(self.ACCOUNT_NUMBER))
+        self.assertEqual(self.account.balance, self.INITIAL_DEPOSIT)
+        self.assertEqual(self.account.interest_rate, self.INTEREST_RATE)
+
+    def test_interest_rate_set(self):
+        pass
+
+    def test_apply_interest(self):
+        self.account.apply_interest()
+        expected_balance = 2505.00  # 2500 + (2500 * 0.024) / 12 = 2500 + 5.0
+        actual = self.account.balance
+        self.assertEqual(actual, expected_balance)
+
+    def test_summary(self):
+        self.account.apply_interest()
+        expected_summary = 'Account Number: 2048 Balance: $2505.00 Interest Rate: 0.024'
+        actual_summary = self.account.summary()
+        self.assertEqual(actual_summary, expected_summary)
 
 if __name__ == '__main__':
     unittest.main(verbosity = 2)
