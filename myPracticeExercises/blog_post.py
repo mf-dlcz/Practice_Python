@@ -11,19 +11,19 @@ This one is a bit more involved, but it ties together a lot of the object-orient
 
 Create a base class called Post.
 
-It should have attributes like title (string), content (string), and author (string).
+❎ It should have attributes like title (string), content (string), and author (string).
 
-Include a method display_post() that prints the post's title, author, and content in a readable format.
+❎ Include a method display_post() that prints the post's title, author, and content in a readable format.
 
-Add a method to generate a unique post_id (perhaps using a simple counter or a module like uuid for more robust IDs).
+❎ Add a method to generate a unique post_id (perhaps using a simple counter or a module like uuid for more robust IDs).
 
 #* BlogPost Class (Inheritance):
 
-Create a class BlogPost that inherits from Post.
+❎ Create a class BlogPost that inherits from Post.
 
-BlogPost should have an additional attribute: tags (a list of strings).
+❎ BlogPost should have an additional attribute: tags (a list of strings).
 
-Override the display_post() method to also show the tags.
+❎ Override the display_post() method to also show the tags.
 
 #* Comment Class (Association):
 
@@ -66,16 +66,41 @@ For unit tests, think about the "happy path" (things working as expected) and "e
 invalid input).
 '''
 
-class Post:
+import logging
+import uuid
 
+# Configure logging
+logging.basicConfig(
+    filename='blog_log.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+class Post:
     def __init__(self, title, content, author):
         self.title = title
         self.content = content
         self.author = author
+        self.post_id = self.generate_post_id()
+        logging.info(f"Post created: '{self.title}' by {self.author}")
 
-        def display_post():
-            return f'''
-                Title: {title},
-                Content: {content},
-                Author: {author}
-            '''
+    def display_post(self):
+        return f'''
+            Title: {self.title}
+            Content: {self.content}
+            Author: {self.author}
+            Post ID: {self.post_id}
+        '''
+
+    def generate_post_id(self):
+        return str(uuid.uuid4())
+
+class BlogPost(Post):
+    def __init__(self, tags):
+        self.tags = []
+
+    def display_post(self):
+        return f'Tags: {self.tags}'
+
+class Comment(Post):
+    
