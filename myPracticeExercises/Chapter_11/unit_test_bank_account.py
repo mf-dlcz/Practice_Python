@@ -27,7 +27,7 @@ class Account:
         return self.balance
     
     def summary(self):
-        return f"Account Number: {self.account_number} Balance: ${round(self.balance, 2)}"
+        return f"Account Number: {self.account_number} Balance: ${round(self.balance, 2):.02f}"
         
 
 class SavingsAccount(Account):
@@ -64,12 +64,23 @@ class TestAccountClass(unittest.TestCase):
         account.withdraw(5.00)
         self.assertAlmostEqual(account.balance, 6.04)
 
+    def test_withdraw_underdraft(self):
+        account = Account(123456, 100)
+        account.withdraw(-100)
+        self.assertEqual(account.balance, 100)
+
     def test_get_balance(self):
-        pass
+        account = Account(123456, 100)
+        self.assertEqual(account.get_balance(), 100)
+        account.deposit(1000)
+        self.assertEqual(account.get_balance(), 1100)
+        account.withdraw(1000)
+        self.assertEqual(account.get_balance(), 100)
 
     def test_summary(self):
-        pass
-
+        account = Account(123456, 250)
+        expected = 'Account Number: 123456 Balance: $250.00'
+        self.assertEqual(account.summary(), expected)
 
 if __name__ == '__main__':
     unittest.main(verbosity = 2)
