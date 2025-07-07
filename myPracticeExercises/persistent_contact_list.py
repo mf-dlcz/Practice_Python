@@ -3,7 +3,7 @@
 
 #*              The Challenge:
 
-Create a Contact List: Start with an empty list that will store your contacts.
+❎ Create a Contact List: Start with an empty list that will store your contacts.
 
 #* Add a Contact:
 
@@ -35,3 +35,13 @@ How can you iterate through your list of contacts to display them or search for 
 
 Think about using a while loop to keep the menu running until the user chooses to exit.
 '''
+
+contact_list = []
+print('Enter a new contact')
+contact_name = input('Name: ')
+contacts_phone = input('Phone Number: ')
+
+contact_list.append(contact_name)
+contact_list.append(contacts_phone)
+
+print(contact_list)
