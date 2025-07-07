@@ -68,6 +68,7 @@ invalid input).
 
 import logging
 import uuid
+import unittest
 
 # Configure logging
 logging.basicConfig(
@@ -103,4 +104,18 @@ class BlogPost(Post):
         return f'Tags: {self.tags}'
 
 class Comment(Post):
-    
+
+
+
+
+####                UNIT TESTS              ####
+class TestPost(unittest.TestCase):
+
+class TestBlogPost(unittest.TestCase):
+
+
+class TestComment(unittest.TestCase):
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity = 2)
