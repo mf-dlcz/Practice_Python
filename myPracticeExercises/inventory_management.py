@@ -31,3 +31,8 @@ How do you define a method within a class that can access the object's own attri
 
 How would you create an instance (an object) of your Item class?
 '''
+
+class Item:
+
+    def __init__(self):
+        pass
