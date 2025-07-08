@@ -32,3 +32,5 @@ What kind of loop would be best when you don't know exactly how many guesses the
 How can you check if the input is a number before trying to convert it? (Think about try-except blocks, or string methods).
 
 '''
+
+guess = input('Guess the number: ')
