@@ -7,11 +7,11 @@
 
 #* Add a Contact:
 
-Ask the user for a contact's name and phone number.
+❎ Ask the user for a contact's name and phone number.
 
-Store this information. How would you store a name and a phone number together for one contact? How would you store multiple contacts?
+❎ Store this information. How would you store a name and a phone number together for one contact? How would you store multiple contacts?
 
-Add the new contact to your list.
+❎ Add the new contact to your list.
 
 View All Contacts: Allow the user to see a list of all stored contacts, displaying both the name and phone number for each.
 
@@ -45,3 +45,5 @@ contact_list.append(contact_name)
 contact_list.append(contacts_phone)
 
 print(contact_list)
+
+while 
