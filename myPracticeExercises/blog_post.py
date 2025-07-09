@@ -70,7 +70,8 @@ import logging
 import uuid
 import unittest
 
-# Configure logging
+####                LOGGING             ####
+
 logging.basicConfig(
     filename='blog_log.txt',
     level=logging.INFO,
