@@ -107,15 +107,9 @@ class Comment(Post):
     pass
 
 
-####                LOGGING             ####
-logging.basicConfig(filename = 'blog_log.txt',
-                    format = '%(asctime)s %(levelname)s %(message)s',
-                    level = logging.INFO)
-
-
-
 
 ####                UNIT TESTS              ####
+
 class TestPost(unittest.TestCase):
     def test_display_post(self):
         pass
