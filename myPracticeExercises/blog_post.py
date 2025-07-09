@@ -104,18 +104,24 @@ class BlogPost(Post):
         return f'Tags: {self.tags}'
 
 class Comment(Post):
-
+    pass
 
 
 
 ####                UNIT TESTS              ####
 class TestPost(unittest.TestCase):
+    def test_display_post(self):
+        pass
+
+    def test_generate_post_id(self):
+        pass
 
 class TestBlogPost(unittest.TestCase):
-
+    def test_display_post(self):
+        pass
 
 class TestComment(unittest.TestCase):
-
+    pass
 
 if __name__ == '__main__':
     unittest.main(verbosity = 2)
