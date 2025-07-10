@@ -34,5 +34,9 @@ How would you create an instance (an object) of your Item class?
 
 class Item:
 
-    def __init__(self):
-        pass
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def display_info(self):
+        return f"Item: {self.name} Price: {self.price}"
