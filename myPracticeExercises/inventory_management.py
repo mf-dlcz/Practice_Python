@@ -39,4 +39,11 @@ class Item:
         self.price = price
 
     def display_info(self):
-        return f"Item: {self.name} Price: {self.price}"
+        return f"Item: {self.name} Price: ${self.price}"
+
+
+'''         TESTING             '''
+item1 = Item('laptop', 3200)
+item2 = Item('mouse', 60.89)
+item3 = Item('keyboard', 350.03)
+
