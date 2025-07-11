@@ -60,3 +60,12 @@ or you can simply check if the ID is already a key in your main dictionary.
 Think about how to iterate through your nested data structure to access individual student information 
 and their grades.
 '''
+
+def add_grade(student_id, grade):
+    pass
+
+def calc_average_grade(student_id):
+    pass
+
+def display_student_info(student_id):
+    return f"Student: \nStudent ID: {student_id}\nGrades: "
