@@ -1,0 +1,2 @@
+2025-07-11 23:04:12,296 - INFO - Post created: 'My first post' by MD
+2025-07-11 23:04:12,296 - INFO - Post created: 'My second post' by MD

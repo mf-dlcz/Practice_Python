@@ -128,8 +128,10 @@ class TestComment(unittest.TestCase):
 ####                TEST DATA               ####
 
 post_1 = Post('My first post', 'Summary of my first day', 'MD')
+post_2 = Post('My second post', 'Day 2 in the life of ...', 'MD')
 
 print(post_1)
+print(post_2)
 
 
 
