@@ -125,5 +125,13 @@ class TestBlogPost(unittest.TestCase):
 class TestComment(unittest.TestCase):
     pass
 
-if __name__ == '__main__':
-    unittest.main(verbosity = 2)
+####                TEST DATA               ####
+
+post_1 = Post('My first post', 'Summary of my first day', 'MD')
+
+print(post_1)
+
+
+
+# if __name__ == '__main__':
+    # unittest.main(verbosity = 2)
