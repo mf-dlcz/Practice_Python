@@ -49,3 +49,11 @@ How do you access individual elements within a tuple? (Think indexing!)
 
 When getting the publication year from the user, what kind of casting will you need to perform?
 '''
+
+
+
+def add_new_book():
+    pass
+
+def display_all_books():
+    pass
