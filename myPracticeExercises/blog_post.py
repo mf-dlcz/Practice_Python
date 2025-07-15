@@ -31,7 +31,7 @@ This one is a bit more involved, but it ties together a lot of the object-orient
 '''
 #* Comment Class (Association):
 
-Create a Comment class with author (string) and text (string) attributes.
+❎ Create a Comment class with author (string) and text (string) attributes.
 
 A BlogPost should be able to have multiple Comment objects associated with it. How will you store these comments 
 within a BlogPost instance?
@@ -116,8 +116,15 @@ class BlogPost(Post):
         return f'Tags: {self.tags}'
 
 class Comment(Post):
-    pass
+    def __init__(self, author, text):
+        self.author = author
+        self.text = text
 
+    def add_comment():
+        pass
+
+    def display_post():
+        pass
 
 
 ####                UNIT TESTS              ####
@@ -134,7 +141,11 @@ class TestBlogPost(unittest.TestCase):
         pass
 
 class TestComment(unittest.TestCase):
-    pass
+    def test_add_comment(self):
+        pass
+
+    def test_display_post(self):
+        pass
 
 ####                TEST DATA               ####
 
@@ -143,7 +154,6 @@ post_2 = Post('My second post', 'Day 2 in the life of ...', 'MD')
 
 print(post_1)
 print(post_2)
-
 
 
 # if __name__ == '__main__':
