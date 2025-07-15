@@ -98,7 +98,8 @@ class Post:
         return str(uuid.uuid4())
 
 class BlogPost(Post):
-    def __init__(self, tags):
+    def __init__(self, title, content, author, tags):
+        super().__init__(title, content, author)
         self.tags = []
 
     def display_post(self):
