@@ -48,9 +48,9 @@ Modify display_post() to also display all associated comments.
 Whenever a new Post or Comment is created, or an error occurs (e.g., trying to add a comment to a non-existent 
 post if you were to expand this), write a log entry to a file named blog_log.txt.
 
-Include timestamps in your log entries.
+❎ Include timestamps in your log entries.
 
-Use the logging module for this, and ensure you also practice logging exceptions.
+❎ Use the logging module for this, and ensure you also practice logging exceptions.
 '''
 
 '''
