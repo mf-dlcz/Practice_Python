@@ -3,18 +3,18 @@
 
 #*              The Challenge:
 
-Generate a Secret Number: Your program should pick a "secret number" between 1 and 10. You can start by hardcoding this 
+❎ Generate a Secret Number: Your program should pick a "secret number" between 1 and 10. You can start by hardcoding this 
 for now, e.g., secret_number = 7. Later, you can look into how to generate a random number.
 
-Get User's Guess: Prompt the user to guess the number.
+❎ Get User's Guess: Prompt the user to guess the number.
 
 #* Check the Guess:
 
-If the user's guess is correct, tell them "Congratulations! You guessed it!" and end the game.
+❎ If the user's guess is correct, tell them "Congratulations! You guessed it!" and end the game.
 
-If the guess is too high, tell them "Too high! Try again."
+❎ If the guess is too high, tell them "Too high! Try again."
 
-If the guess is too low, tell them "Too low! Try again."
+❎ If the guess is too low, tell them "Too low! Try again."
 
 #* Keep Going: 
 
@@ -33,4 +33,21 @@ How can you check if the input is a number before trying to convert it? (Think a
 
 '''
 
-guess = input('Guess the number: ')
+from random import randint
+
+def guessing_game():
+    secret_number = randint(1, 10)
+    while True:
+        try:
+            users_guess = int(input('Guess the secret number between 1 - 10: '))
+            if users_guess == secret_number:
+                print('Congrats! You guessed it!')
+                break
+            elif users_guess > secret_number:
+                print('Too high! Try again')
+            else:
+                print('Too low! Try again')
+        except ValueError:
+            print('Invalid input. Please enter a number between 1 and 10')
+
+guessing_game()

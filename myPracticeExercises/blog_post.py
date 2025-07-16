@@ -152,8 +152,6 @@ class TestComment(unittest.TestCase):
 post_1 = Post('My first post', 'Summary of my first day', 'MD')
 post_2 = Post('My second post', 'Day 2 in the life of ...', 'MD')
 
-print(post_1)
-print(post_2)
 
 
 # if __name__ == '__main__':
